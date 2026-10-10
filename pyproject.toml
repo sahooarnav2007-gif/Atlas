@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-tabular-intelligence"
+version = "0.1.0"
+description = "Universal dataset-agnostic AI data analyst that executes real analytical tools, verifies evidence, and retains domain memory across sessions."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "ATLAS Engineering Team" }]
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "pydantic>=2.6.0",
+    "duckdb>=0.10.0",
+    "pandas>=2.2.0",
+    "scipy>=1.12.0",
+    "statsmodels>=0.14.0",
+    "scikit-learn>=1.4.0",
+    "plotly>=5.20.0",
+    "streamlit>=1.32.0",
+    "sqlalchemy>=2.0.0",
+    "httpx>=0.27.0",
+    "openpyxl>=3.1.2",
+    "python-multipart>=0.0.9"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0"
+]

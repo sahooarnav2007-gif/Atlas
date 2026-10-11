@@ -1,0 +1,1001 @@
+transaction_id,date,region,customer_segment,customer_status,order_value,revenue,churn
+TXN-100001,2025-11-24,North America,Enterprise,pending,1349.01,1214.11,0
+TXN-100002,2025-03-13,North America,Enterprise,cancelled,1158.52,984.74,1
+TXN-100003,2025-01-17,North America,Enterprise,active,1394.31,1324.59,0
+TXN-100004,2025-01-14,Middle East,Mid-Market,pending,828.45,704.18,0
+TXN-100005,2025-10-29,Asia-Pacific,Enterprise,active,1129.75,960.29,0
+TXN-100006,2025-03-21,Europe,SMB,active,235.37,235.37,0
+TXN-100007,2025-07-03,Asia-Pacific,SMB,active,348.7,296.39,0
+TXN-100008,2025-07-13,North America,SMB,pending,297.96,268.16,0
+TXN-100009,2025-12-27,North America,Enterprise,pending,1059.16,1006.2,0
+TXN-100010,2025-02-10,Europe,Enterprise,active,1362.77,1226.49,0
+TXN-100011,2025-07-06,Europe,SMB,active,221.04,209.99,0
+TXN-100012,2025-12-26,North America,Mid-Market,cancelled,530.14,503.63,1
+TXN-100013,2025-03-25,Latin America,Consumer,active,84.84,80.6,0
+TXN-100014,2025-01-29,Europe,Enterprise,active,626.02,532.12,0
+TXN-100015,2025-04-19,Middle East,SMB,active,142.19,120.86,0
+TXN-100016,2025-11-26,Latin America,Mid-Market,active,515.66,489.88,0
+TXN-100017,2025-10-15,Middle East,SMB,pending,186.7,158.69,0
+TXN-100018,2025-07-24,Asia-Pacific,Mid-Market,active,647.14,550.07,1
+TXN-100019,2025-01-25,North America,Mid-Market,pending,463.8,440.61,0
+TXN-100020,2025-08-05,Middle East,Enterprise,active,776.31,659.86,0
+TXN-100021,2025-08-28,Middle East,SMB,cancelled,341.6,341.6,1
+TXN-100022,2025-12-15,North America,SMB,pending,235.89,212.3,1
+TXN-100023,2025-08-11,Europe,Consumer,active,81.35,73.22,0
+TXN-100024,2025-04-02,Middle East,Enterprise,pending,772.58,695.32,0
+TXN-100025,2025-09-17,Middle East,Mid-Market,active,518.34,466.51,0
+TXN-100026,2025-10-04,Middle East,Enterprise,cancelled,1233.28,1109.95,1
+TXN-100027,2025-09-08,North America,Enterprise,active,854.7,769.23,0
+TXN-100028,2025-05-04,Middle East,Enterprise,active,1312.71,1115.8,0
+TXN-100029,2025-09-30,Europe,Mid-Market,pending,509.9,433.41,0
+TXN-100030,2025-03-26,Asia-Pacific,Consumer,active,74.17,70.46,0
+TXN-100031,2025-07-24,Asia-Pacific,Consumer,cancelled,67.97,57.77,1
+TXN-100032,2025-03-03,Europe,Mid-Market,active,877.84,790.06,1
+TXN-100033,2025-10-11,Europe,Mid-Market,active,597.98,597.98,0
+TXN-100034,2025-01-31,Europe,Enterprise,active,882.69,794.42,1
+TXN-100035,2025-05-02,Asia-Pacific,Consumer,active,96.45,91.63,0
+TXN-100036,2025-10-20,Middle East,Consumer,active,55.58,47.24,0
+TXN-100037,2025-04-08,North America,Enterprise,pending,1262.66,1073.26,0
+TXN-100038,2025-07-30,Latin America,Enterprise,pending,612.1,612.1,1
+TXN-100039,2025-06-23,North America,Mid-Market,active,400.77,380.73,0
+TXN-100040,2025-03-13,Latin America,Mid-Market,active,629.53,535.1,0
+TXN-100041,2025-02-08,Latin America,Enterprise,active,1421.54,1421.54,0
+TXN-100042,2025-05-02,Europe,Consumer,active,83.43,70.92,0
+TXN-100043,2025-07-25,North America,Mid-Market,active,582.65,582.65,0
+TXN-100044,2025-05-16,Latin America,SMB,active,231.18,196.5,0
+TXN-100045,2025-06-01,Europe,Enterprise,cancelled,756.44,756.44,1
+TXN-100046,2025-06-10,North America,Enterprise,cancelled,984.05,836.44,1
+TXN-100047,2025-09-15,Middle East,Mid-Market,active,530.9,530.9,0
+TXN-100048,2025-02-05,Middle East,Enterprise,pending,1517.14,1441.28,0
+TXN-100049,2025-10-19,Europe,Enterprise,cancelled,1303.09,1303.09,1
+TXN-100050,2025-08-03,Middle East,SMB,active,139.81,132.82,0
+TXN-100051,2025-06-10,Europe,SMB,active,270.26,256.75,0
+TXN-100052,2025-06-03,Latin America,SMB,active,225.93,225.93,0
+TXN-100053,2025-10-16,North America,Enterprise,cancelled,996.92,947.07,1
+TXN-100054,2025-09-17,Asia-Pacific,Mid-Market,active,691.75,691.75,0
+TXN-100055,2025-07-09,Asia-Pacific,Mid-Market,active,754.65,679.18,0
+TXN-100056,2025-12-01,Middle East,Enterprise,pending,1479.38,1331.44,0
+TXN-100057,2025-02-23,Europe,SMB,active,197.55,197.55,0
+TXN-100058,2025-03-21,Asia-Pacific,SMB,cancelled,230.67,219.14,1
+TXN-100059,2025-06-25,Europe,SMB,cancelled,270.7,230.09,1
+TXN-100060,2025-05-09,North America,Enterprise,pending,1492.66,1268.76,0
+TXN-100061,2025-01-23,North America,SMB,active,220.05,198.05,0
+TXN-100062,2025-08-15,Middle East,Consumer,cancelled,76.29,76.29,1
+TXN-100063,2025-02-27,North America,Mid-Market,cancelled,434.05,434.05,1
+TXN-100064,2025-07-09,Middle East,Mid-Market,active,420.57,399.54,1
+TXN-100065,2025-07-06,North America,SMB,active,300.78,285.74,0
+TXN-100066,2025-07-01,Middle East,Consumer,cancelled,107.12,101.76,1
+TXN-100067,2025-05-02,Europe,Mid-Market,active,589.2,589.2,0
+TXN-100068,2025-06-20,Latin America,Mid-Market,active,750.53,713.0,0
+TXN-100069,2025-02-25,Latin America,Enterprise,active,1308.49,1243.07,0
+TXN-100070,2025-08-24,Asia-Pacific,SMB,active,209.68,199.2,1
+TXN-100071,2025-04-09,Latin America,SMB,active,272.59,272.59,0
+TXN-100072,2025-05-23,Asia-Pacific,Consumer,pending,110.76,99.68,0
+TXN-100073,2025-03-01,Asia-Pacific,Mid-Market,cancelled,594.63,535.17,1
+TXN-100074,2025-01-20,North America,Consumer,active,111.29,100.16,0
+TXN-100075,2025-09-19,North America,Consumer,cancelled,27.61,26.23,1
+TXN-100076,2025-05-11,North America,Consumer,active,96.44,91.62,0
+TXN-100077,2025-02-05,Asia-Pacific,SMB,pending,255.44,255.44,0
+TXN-100078,2025-06-03,Middle East,SMB,pending,231.31,196.61,0
+TXN-100079,2025-12-23,Asia-Pacific,Mid-Market,active,613.76,521.7,0
+TXN-100080,2025-07-14,Europe,SMB,active,125.78,125.78,0
+TXN-100081,2025-04-18,Latin America,SMB,active,236.27,200.83,0
+TXN-100082,2025-04-20,Middle East,Consumer,pending,87.14,82.78,0
+TXN-100083,2025-05-26,Middle East,SMB,active,342.37,325.25,0
+TXN-100084,2025-04-26,Europe,Mid-Market,active,522.26,522.26,0
+TXN-100085,2025-09-01,Middle East,Enterprise,active,957.45,813.83,0
+TXN-100086,2025-10-22,Europe,Consumer,active,69.96,59.47,0
+TXN-100087,2025-12-02,North America,Enterprise,active,1474.62,1400.89,0
+TXN-100088,2025-12-23,Middle East,Consumer,active,86.58,82.25,0
+TXN-100089,2025-03-04,Latin America,Mid-Market,active,520.54,468.49,0
+TXN-100090,2025-08-15,Middle East,Consumer,cancelled,90.27,76.73,1
+TXN-100091,2025-03-23,Latin America,Consumer,active,81.94,77.84,0
+TXN-100092,2025-05-22,Middle East,Consumer,pending,99.37,94.4,0
+TXN-100093,2025-02-09,Asia-Pacific,Mid-Market,active,494.69,445.22,0
+TXN-100094,2025-10-04,North America,Mid-Market,active,550.85,523.31,0
+TXN-100095,2025-03-20,Europe,Enterprise,active,1082.37,920.01,0
+TXN-100096,2025-08-27,Latin America,Enterprise,active,760.95,646.81,0
+TXN-100097,2025-10-27,North America,Consumer,active,85.92,85.92,0
+TXN-100098,2025-06-02,Latin America,Consumer,cancelled,85.22,80.96,1
+TXN-100099,2025-09-07,Europe,SMB,active,250.32,212.77,1
+TXN-100100,2025-06-22,Latin America,Mid-Market,active,564.81,536.57,0
+TXN-100101,2025-10-01,North America,Consumer,cancelled,51.69,51.69,1
+TXN-100102,2025-02-12,Latin America,Mid-Market,active,536.9,510.05,1
+TXN-100103,2025-07-14,Asia-Pacific,Mid-Market,active,548.59,493.73,0
+TXN-100104,2025-07-14,Asia-Pacific,Consumer,active,63.95,63.95,0
+TXN-100105,2025-10-04,North America,SMB,active,2879.04,2879.04,0
+TXN-100106,2025-11-30,North America,Enterprise,active,1321.22,1255.16,0
+TXN-100107,2025-11-15,Europe,Mid-Market,active,882.93,750.49,0
+TXN-100108,2025-10-16,Europe,Consumer,pending,83.49,75.14,0
+TXN-100109,2025-03-27,Middle East,Enterprise,active,1277.27,1149.54,1
+TXN-100110,2025-01-14,Asia-Pacific,Consumer,active,78.51,74.58,1
+TXN-100111,2025-12-20,Europe,Enterprise,pending,624.37,561.93,0
+TXN-100112,2025-11-04,North America,Enterprise,active,1192.05,1013.24,0
+TXN-100113,2025-02-05,Middle East,SMB,active,253.76,215.7,0
+TXN-100114,2025-02-24,Latin America,SMB,pending,403.95,343.36,0
+TXN-100115,2025-08-11,Europe,SMB,cancelled,237.98,202.28,1
+TXN-100116,2025-08-27,Latin America,SMB,active,268.85,255.41,0
+TXN-100117,2025-02-14,Asia-Pacific,Consumer,active,79.31,67.41,0
+TXN-100118,2025-12-09,Latin America,SMB,active,176.96,150.42,0
+TXN-100119,2025-04-04,Latin America,Mid-Market,active,771.42,694.28,0
+TXN-100120,2025-11-02,Asia-Pacific,Enterprise,cancelled,1425.58,1354.3,1
+TXN-100121,2025-02-13,Europe,Consumer,active,95.82,91.03,0
+TXN-100122,2025-11-27,Latin America,Consumer,active,61.81,61.81,0
+TXN-100123,2025-07-27,Europe,SMB,pending,337.67,303.9,0
+TXN-100124,2025-09-29,Asia-Pacific,Consumer,pending,51.96,46.76,0
+TXN-100125,2025-08-21,Asia-Pacific,SMB,active,286.68,272.35,0
+TXN-100126,2025-04-09,Asia-Pacific,Enterprise,pending,1857.14,1764.28,0
+TXN-100127,2025-09-05,Asia-Pacific,SMB,active,188.09,178.69,0
+TXN-100128,2025-07-04,Europe,SMB,active,214.61,203.88,0
+TXN-100129,2025-01-28,Middle East,SMB,pending,256.23,243.42,0
+TXN-100130,2025-09-09,North America,Enterprise,cancelled,1048.96,944.06,1
+TXN-100131,2025-08-29,Latin America,Consumer,active,48.99,46.54,0
+TXN-100132,2025-05-10,Latin America,Enterprise,active,1220.57,1037.48,0
+TXN-100133,2025-10-23,North America,Mid-Market,active,440.65,396.58,1
+TXN-100134,2025-05-08,North America,Consumer,cancelled,89.47,85.0,1
+TXN-100135,2025-09-25,Latin America,Consumer,active,61.61,55.45,0
+TXN-100136,2025-08-08,Asia-Pacific,Enterprise,cancelled,1664.98,1664.98,1
+TXN-100137,2025-04-17,Europe,SMB,pending,201.05,201.05,0
+TXN-100138,2025-03-30,Middle East,Enterprise,active,1103.38,1103.38,0
+TXN-100139,2025-12-19,Middle East,Consumer,active,96.27,96.27,0
+TXN-100140,2025-12-28,Asia-Pacific,Consumer,active,55.38,52.61,0
+TXN-100141,2025-11-17,Middle East,Mid-Market,active,634.12,634.12,0
+TXN-100142,2025-11-28,Europe,SMB,active,331.7,331.7,1
+TXN-100143,2025-06-07,Middle East,SMB,active,149.53,149.53,0
+TXN-100144,2025-06-05,Latin America,SMB,cancelled,261.54,222.31,1
+TXN-100145,2025-08-13,North America,Enterprise,active,1277.96,1150.16,0
+TXN-100146,2025-01-14,North America,Mid-Market,pending,717.27,717.27,0
+TXN-100147,2025-12-11,Asia-Pacific,Enterprise,active,828.91,704.57,0
+TXN-100148,2025-08-15,Asia-Pacific,Mid-Market,cancelled,401.93,341.64,1
+TXN-100149,2025-11-22,Latin America,Enterprise,active,1356.58,1220.92,0
+TXN-100150,2025-06-14,North America,Mid-Market,active,644.55,547.87,0
+TXN-100151,2025-05-28,Latin America,Enterprise,active,1275.15,1275.15,0
+TXN-100152,2025-06-15,North America,Consumer,cancelled,86.93,86.93,1
+TXN-100153,2025-12-03,Middle East,Consumer,active,66.4,66.4,0
+TXN-100154,2025-07-05,Middle East,Consumer,pending,84.65,71.95,0
+TXN-100155,2025-04-15,Asia-Pacific,Mid-Market,active,643.96,547.37,0
+TXN-100156,2025-09-06,North America,Enterprise,pending,985.69,936.41,0
+TXN-100157,2025-06-09,Middle East,Enterprise,cancelled,1759.73,1495.77,1
+TXN-100158,2025-02-17,Europe,Enterprise,active,1342.15,1342.15,0
+TXN-100159,2025-03-20,Latin America,SMB,cancelled,175.54,157.99,1
+TXN-100160,2025-08-01,Latin America,Consumer,active,93.13,79.16,0
+TXN-100161,2025-07-16,Europe,Mid-Market,active,453.8,408.42,0
+TXN-100162,2025-08-01,Asia-Pacific,SMB,active,299.19,269.27,0
+TXN-100163,2025-10-28,Middle East,Consumer,active,103.17,87.69,0
+TXN-100164,2025-06-26,Asia-Pacific,Consumer,active,63.59,57.23,0
+TXN-100165,2025-12-24,Europe,Consumer,active,99.27,84.38,1
+TXN-100166,2025-08-31,Latin America,Consumer,pending,88.26,83.85,0
+TXN-100167,2025-01-19,Europe,SMB,active,301.38,256.17,1
+TXN-100168,2025-08-22,North America,Mid-Market,active,884.52,840.29,1
+TXN-100169,2025-05-16,Asia-Pacific,Consumer,pending,75.09,75.09,0
+TXN-100170,2025-12-12,Middle East,Consumer,active,64.93,55.19,0
+TXN-100171,2025-01-19,Middle East,Enterprise,active,933.15,839.84,0
+TXN-100172,2025-02-16,Latin America,Enterprise,pending,955.26,955.26,0
+TXN-100173,2025-12-22,Asia-Pacific,Enterprise,active,1176.87,1059.18,0
+TXN-100174,2025-05-31,Asia-Pacific,SMB,active,271.32,257.75,0
+TXN-100175,2025-07-30,Middle East,Mid-Market,active,641.5,609.42,1
+TXN-100176,2025-07-15,Middle East,Mid-Market,active,724.08,687.88,0
+TXN-100177,2025-11-23,Asia-Pacific,Consumer,active,80.26,80.26,0
+TXN-100178,2025-08-27,Asia-Pacific,Mid-Market,active,818.03,695.33,0
+TXN-100179,2025-10-28,Asia-Pacific,Consumer,pending,74.71,67.24,0
+TXN-100180,2025-06-04,Europe,Consumer,active,134.4,134.4,0
+TXN-100181,2025-10-20,Asia-Pacific,SMB,pending,289.1,260.19,1
+TXN-100182,2025-12-04,Latin America,SMB,active,196.43,196.43,0
+TXN-100183,2025-09-12,Asia-Pacific,Mid-Market,cancelled,439.37,395.43,1
+TXN-100184,2025-04-23,Europe,SMB,pending,280.15,266.14,0
+TXN-100185,2025-11-18,North America,SMB,active,236.03,236.03,0
+TXN-100186,2025-03-09,North America,SMB,active,294.63,250.44,0
+TXN-100187,2025-03-09,Middle East,SMB,cancelled,279.58,251.62,1
+TXN-100188,2025-03-26,Asia-Pacific,Consumer,active,78.54,70.69,0
+TXN-100189,2025-08-28,North America,Mid-Market,active,472.98,402.03,0
+TXN-100190,2025-10-13,Asia-Pacific,Enterprise,active,745.55,745.55,0
+TXN-100191,2025-03-05,Latin America,SMB,pending,222.09,199.88,0
+TXN-100192,2025-11-23,Asia-Pacific,Enterprise,pending,1456.92,1384.07,0
+TXN-100193,2025-11-14,Middle East,SMB,cancelled,263.38,250.21,1
+TXN-100194,2025-11-28,North America,Consumer,pending,55.09,49.58,0
+TXN-100195,2025-03-01,Europe,Enterprise,active,1251.95,1126.76,0
+TXN-100196,2025-03-01,North America,Mid-Market,cancelled,657.8,624.91,1
+TXN-100197,2025-07-18,Latin America,SMB,pending,194.76,165.55,0
+TXN-100198,2025-03-21,Latin America,Enterprise,active,1246.12,1059.2,0
+TXN-100199,2025-05-24,North America,SMB,active,253.64,215.59,0
+TXN-100200,2025-05-01,Asia-Pacific,Enterprise,pending,857.11,771.4,0
+TXN-100201,2025-11-27,Asia-Pacific,Enterprise,active,1307.34,1176.61,0
+TXN-100202,2025-03-04,Latin America,Enterprise,pending,1368.24,1299.83,0
+TXN-100203,2025-11-02,North America,Enterprise,active,1524.92,1448.67,0
+TXN-100204,2025-10-17,Europe,Enterprise,cancelled,1516.14,1440.33,1
+TXN-100205,2025-10-28,Europe,Mid-Market,active,393.35,373.68,0
+TXN-100206,2025-11-02,North America,SMB,active,191.39,181.82,0
+TXN-100207,2025-03-31,North America,Enterprise,active,1354.51,1354.51,0
+TXN-100208,2025-05-02,Middle East,SMB,active,282.11,268.0,0
+TXN-100209,2025-03-06,Latin America,Enterprise,pending,1354.51,1354.51,0
+TXN-100210,2025-07-05,Middle East,Enterprise,active,2355.82,2238.03,0
+TXN-100211,2025-01-23,Middle East,SMB,active,285.68,285.68,1
+TXN-100212,2025-09-03,Latin America,Consumer,pending,102.71,102.71,0
+TXN-100213,2025-08-16,North America,Enterprise,active,1486.2,1411.89,1
+TXN-100214,2025-05-21,Middle East,SMB,active,290.71,261.64,0
+TXN-100215,2025-11-06,Latin America,Enterprise,pending,1105.42,1105.42,0
+TXN-100216,2025-11-30,Middle East,Mid-Market,active,713.85,606.77,0
+TXN-100217,2025-07-31,Asia-Pacific,Consumer,active,64.54,54.86,0
+TXN-100218,2025-06-10,Latin America,SMB,pending,235.2,211.68,0
+TXN-100219,2025-03-20,Latin America,Enterprise,active,1054.39,1054.39,1
+TXN-100220,2025-02-19,Asia-Pacific,Mid-Market,cancelled,612.28,612.28,1
+TXN-100221,2025-10-28,Middle East,SMB,pending,394.67,394.67,0
+TXN-100222,2025-12-07,Latin America,Enterprise,active,639.82,575.84,0
+TXN-100223,2025-10-23,Middle East,Mid-Market,active,702.94,597.5,0
+TXN-100224,2025-02-25,Asia-Pacific,SMB,active,149.21,134.29,0
+TXN-100225,2025-08-08,Middle East,Enterprise,cancelled,1058.42,952.58,1
+TXN-100226,2025-01-15,Europe,SMB,pending,318.06,286.25,0
+TXN-100227,2025-06-29,North America,Mid-Market,active,609.64,518.19,1
+TXN-100228,2025-11-21,North America,Enterprise,pending,876.68,832.85,0
+TXN-100229,2025-08-21,Asia-Pacific,Mid-Market,active,492.7,443.43,0
+TXN-100230,2025-10-18,Middle East,Enterprise,active,16846.56,16004.23,0
+TXN-100231,2025-11-13,North America,Enterprise,active,980.89,833.76,0
+TXN-100232,2025-09-06,Middle East,Consumer,active,84.33,75.9,0
+TXN-100233,2025-09-20,North America,SMB,active,252.85,252.85,0
+TXN-100234,2025-12-14,Middle East,Consumer,cancelled,66.97,60.27,1
+TXN-100235,2025-01-24,Europe,Consumer,cancelled,122.88,122.88,1
+TXN-100236,2025-01-04,Europe,SMB,active,289.62,275.14,0
+TXN-100237,2025-05-29,Asia-Pacific,Enterprise,active,592.46,503.59,0
+TXN-100238,2025-03-31,Europe,Consumer,cancelled,83.73,79.54,1
+TXN-100239,2025-09-14,Middle East,SMB,active,208.64,177.34,0
+TXN-100240,2025-01-22,Latin America,Enterprise,active,1455.73,1455.73,0
+TXN-100241,2025-10-22,Latin America,Consumer,pending,64.15,54.53,0
+TXN-100242,2025-07-27,North America,SMB,active,242.83,206.41,0
+TXN-100243,2025-07-05,North America,Consumer,active,90.1,85.59,0
+TXN-100244,2025-07-25,Middle East,Enterprise,active,1459.73,1313.76,0
+TXN-100245,2025-04-24,Asia-Pacific,Mid-Market,active,419.96,419.96,0
+TXN-100246,2025-04-10,Asia-Pacific,SMB,pending,229.09,217.64,0
+TXN-100247,2025-03-16,Asia-Pacific,Mid-Market,active,528.76,502.32,0
+TXN-100248,2025-12-02,North America,Mid-Market,pending,502.0,426.7,0
+TXN-100249,2025-10-16,Middle East,Consumer,pending,115.31,103.78,0
+TXN-100250,2025-11-18,Asia-Pacific,Mid-Market,active,660.75,660.75,0
+TXN-100251,2025-11-20,Asia-Pacific,SMB,cancelled,171.19,171.19,1
+TXN-100252,2025-06-30,Middle East,Enterprise,active,1475.36,1254.06,0
+TXN-100253,2025-01-30,Asia-Pacific,SMB,active,382.63,382.63,0
+TXN-100254,2025-09-17,Latin America,Consumer,cancelled,100.65,100.65,1
+TXN-100255,2025-08-19,Middle East,Mid-Market,active,372.09,316.28,0
+TXN-100256,2025-02-01,Latin America,Enterprise,active,1054.73,1054.73,0
+TXN-100257,2025-03-30,North America,Mid-Market,pending,790.04,671.53,0
+TXN-100258,2025-09-26,Middle East,Mid-Market,active,493.85,444.47,0
+TXN-100259,2025-07-18,Latin America,SMB,pending,277.74,277.74,0
+TXN-100260,2025-11-28,Asia-Pacific,Enterprise,active,1432.39,1432.39,0
+TXN-100261,2025-07-17,Asia-Pacific,SMB,pending,192.07,182.47,0
+TXN-100262,2025-10-26,Europe,SMB,active,246.28,209.34,0
+TXN-100263,2025-12-29,North America,SMB,cancelled,47.42,40.31,1
+TXN-100264,2025-11-26,Asia-Pacific,Mid-Market,pending,446.34,446.34,0
+TXN-100265,2025-08-05,Middle East,SMB,active,234.21,210.79,0
+TXN-100266,2025-04-20,Asia-Pacific,Consumer,active,55.04,52.29,0
+TXN-100267,2025-03-21,North America,SMB,active,352.03,352.03,0
+TXN-100268,2025-11-13,Europe,Consumer,active,51.4,48.83,0
+TXN-100269,2025-12-21,Middle East,Mid-Market,pending,533.99,453.89,1
+TXN-100270,2025-07-06,Europe,Consumer,cancelled,82.61,74.35,1
+TXN-100271,2025-08-18,Europe,Mid-Market,active,816.19,693.76,0
+TXN-100272,2025-04-10,Asia-Pacific,Consumer,active,51.28,46.15,0
+TXN-100273,2025-09-15,Middle East,Consumer,active,103.26,98.1,0
+TXN-100274,2025-03-12,Asia-Pacific,Enterprise,pending,1203.07,1022.61,0
+TXN-100275,2025-10-11,North America,Enterprise,active,905.55,905.55,0
+TXN-100276,2025-05-20,Latin America,Mid-Market,active,669.32,669.32,0
+TXN-100277,2025-04-24,Latin America,SMB,active,262.44,223.07,1
+TXN-100278,2025-09-15,Asia-Pacific,Mid-Market,active,509.97,509.97,0
+TXN-100279,2025-01-15,Asia-Pacific,Enterprise,pending,1220.94,1098.85,0
+TXN-100280,2025-03-12,North America,SMB,active,225.92,214.62,0
+TXN-100281,2025-08-29,Latin America,Enterprise,active,1234.06,1234.06,0
+TXN-100282,2025-03-18,Middle East,Consumer,active,93.24,83.92,0
+TXN-100283,2025-03-04,North America,Mid-Market,active,837.9,712.21,1
+TXN-100284,2025-09-13,Middle East,Enterprise,pending,828.66,787.23,0
+TXN-100285,2025-05-30,Latin America,Enterprise,cancelled,1839.91,1655.92,1
+TXN-100286,2025-05-04,Middle East,Consumer,active,40.96,40.96,0
+TXN-100287,2025-07-04,North America,Enterprise,active,1154.46,981.29,1
+TXN-100288,2025-07-18,Asia-Pacific,SMB,pending,286.77,286.77,0
+TXN-100289,2025-02-04,Asia-Pacific,Mid-Market,pending,642.15,642.15,0
+TXN-100290,2025-06-20,Europe,Enterprise,active,1013.19,911.87,0
+TXN-100291,2025-03-31,Latin America,Consumer,pending,75.84,72.05,0
+TXN-100292,2025-02-02,Latin America,Enterprise,active,1052.1,999.49,1
+TXN-100293,2025-04-13,North America,SMB,active,213.16,181.19,0
+TXN-100294,2025-10-06,Latin America,SMB,active,303.1,287.94,0
+TXN-100295,2025-01-25,Asia-Pacific,SMB,active,272.31,245.08,0
+TXN-100296,2025-07-24,Latin America,Consumer,active,66.14,62.83,0
+TXN-100297,2025-09-12,Asia-Pacific,SMB,active,306.22,260.29,1
+TXN-100298,2025-11-05,Europe,SMB,active,269.21,269.21,1
+TXN-100299,2025-12-05,Asia-Pacific,SMB,active,300.8,255.68,0
+TXN-100300,2025-08-16,Asia-Pacific,Consumer,active,92.59,83.33,0
+TXN-100301,2025-08-11,Asia-Pacific,Enterprise,active,951.3,808.6,0
+TXN-100302,2025-12-14,Europe,Enterprise,active,1031.95,877.16,1
+TXN-100303,2025-02-04,Europe,SMB,active,296.71,252.2,0
+TXN-100304,2025-01-17,Middle East,Mid-Market,pending,691.56,587.83,0
+TXN-100305,2025-07-10,Latin America,Enterprise,cancelled,1193.73,1134.04,1
+TXN-100306,2025-09-29,Asia-Pacific,Consumer,active,82.35,74.11,0
+TXN-100307,2025-02-28,North America,Mid-Market,active,791.65,672.9,0
+TXN-100308,2025-03-02,Asia-Pacific,SMB,pending,213.03,181.08,0
+TXN-100309,2025-11-10,Asia-Pacific,Consumer,active,90.94,90.94,0
+TXN-100310,2025-02-07,Latin America,Mid-Market,pending,569.67,484.22,0
+TXN-100311,2025-12-16,Asia-Pacific,SMB,pending,236.39,236.39,0
+TXN-100312,2025-05-29,Asia-Pacific,Mid-Market,pending,764.82,726.58,0
+TXN-100313,2025-09-18,Europe,Enterprise,active,1447.62,1375.24,0
+TXN-100314,2025-09-10,North America,SMB,cancelled,300.84,270.76,1
+TXN-100315,2025-08-28,Middle East,Mid-Market,cancelled,795.82,795.82,1
+TXN-100316,2025-02-03,Asia-Pacific,Consumer,pending,80.42,68.36,0
+TXN-100317,2025-07-29,Middle East,Enterprise,active,1404.59,1264.13,0
+TXN-100318,2025-08-19,Latin America,SMB,active,230.61,219.08,0
+TXN-100319,2025-03-08,Latin America,Enterprise,active,1297.25,1232.39,0
+TXN-100320,2025-03-24,Asia-Pacific,Mid-Market,active,580.48,522.43,0
+TXN-100321,2025-05-09,Europe,SMB,active,256.06,230.45,0
+TXN-100322,2025-02-17,Middle East,Mid-Market,cancelled,689.27,654.81,1
+TXN-100323,2025-03-29,Middle East,SMB,cancelled,198.86,198.86,1
+TXN-100324,2025-01-15,North America,Enterprise,pending,1827.72,1644.95,0
+TXN-100325,2025-10-20,Latin America,Enterprise,active,898.19,808.37,0
+TXN-100326,2025-06-04,Latin America,Mid-Market,pending,417.87,355.19,0
+TXN-100327,2025-02-07,North America,Mid-Market,active,773.72,657.66,0
+TXN-100328,2025-04-15,Asia-Pacific,Mid-Market,active,718.75,646.88,0
+TXN-100329,2025-06-26,Latin America,Mid-Market,active,693.62,693.62,0
+TXN-100330,2025-08-27,North America,SMB,active,289.27,274.81,0
+TXN-100331,2025-01-26,Asia-Pacific,Consumer,cancelled,79.76,67.8,1
+TXN-100332,2025-05-08,Europe,SMB,cancelled,193.92,174.53,1
+TXN-100333,2025-04-08,Europe,Consumer,cancelled,81.52,69.29,1
+TXN-100334,2025-09-13,Asia-Pacific,Consumer,active,66.46,66.46,0
+TXN-100335,2025-09-16,Latin America,Mid-Market,active,746.27,671.64,1
+TXN-100336,2025-05-25,Latin America,Consumer,active,77.06,77.06,0
+TXN-100337,2025-08-09,Europe,SMB,pending,198.41,178.57,0
+TXN-100338,2025-07-07,North America,Consumer,active,73.57,69.89,0
+TXN-100339,2025-05-28,North America,Consumer,cancelled,88.26,75.02,1
+TXN-100340,2025-10-09,Asia-Pacific,Enterprise,active,1030.88,1030.88,0
+TXN-100341,2025-06-23,Middle East,SMB,active,198.61,188.68,0
+TXN-100342,2025-07-25,Middle East,Enterprise,active,1273.11,1273.11,0
+TXN-100343,2025-06-20,Latin America,Consumer,active,84.9,80.66,0
+TXN-100344,2025-11-10,Asia-Pacific,Mid-Market,active,523.96,471.56,0
+TXN-100345,2025-09-17,Middle East,Consumer,pending,70.58,63.52,0
+TXN-100346,2025-01-09,Asia-Pacific,SMB,pending,264.5,264.5,0
+TXN-100347,2025-10-26,Asia-Pacific,Enterprise,cancelled,765.57,650.73,1
+TXN-100348,2025-05-16,Middle East,Mid-Market,pending,388.88,388.88,0
+TXN-100349,2025-03-29,Middle East,Consumer,active,65.63,62.35,1
+TXN-100350,2025-12-25,North America,Mid-Market,active,567.98,482.78,0
+TXN-100351,2025-03-19,Latin America,Mid-Market,active,646.64,549.64,0
+TXN-100352,2025-02-01,Europe,Mid-Market,cancelled,821.3,739.17,1
+TXN-100353,2025-12-06,Latin America,Consumer,active,97.15,92.29,0
+TXN-100354,2025-09-30,Asia-Pacific,SMB,pending,240.0,216.0,0
+TXN-100355,2025-04-09,Europe,SMB,cancelled,248.81,223.93,1
+TXN-100356,2025-04-26,Asia-Pacific,SMB,pending,187.34,177.97,0
+TXN-100357,2025-09-08,Asia-Pacific,Consumer,active,79.63,71.67,0
+TXN-100358,2025-10-21,Middle East,Consumer,active,74.23,66.81,0
+TXN-100359,2025-03-16,Asia-Pacific,Enterprise,active,1296.82,1296.82,0
+TXN-100360,2025-08-15,Asia-Pacific,Consumer,active,63.46,60.29,0
+TXN-100361,2025-05-19,Middle East,SMB,active,282.46,282.46,0
+TXN-100362,2025-10-28,Europe,Mid-Market,active,829.91,788.41,0
+TXN-100363,2025-01-27,North America,Consumer,active,77.82,66.15,1
+TXN-100364,2025-03-12,North America,Mid-Market,active,660.26,561.22,0
+TXN-100365,2025-04-13,Asia-Pacific,SMB,active,293.13,293.13,0
+TXN-100366,2025-02-15,Middle East,Mid-Market,cancelled,539.82,539.82,1
+TXN-100367,2025-03-31,Latin America,Mid-Market,active,633.61,538.57,0
+TXN-100368,2025-04-06,Asia-Pacific,Enterprise,active,1203.78,1083.4,0
+TXN-100369,2025-02-24,Asia-Pacific,SMB,active,256.1,217.69,0
+TXN-100370,2025-03-10,Middle East,Consumer,active,64.54,61.31,0
+TXN-100371,2025-06-19,Europe,Consumer,pending,80.49,72.44,0
+TXN-100372,2025-01-08,Asia-Pacific,SMB,cancelled,281.12,267.06,1
+TXN-100373,2025-03-31,Middle East,Consumer,active,109.02,98.12,1
+TXN-100374,2025-12-09,North America,Mid-Market,active,743.89,632.31,0
+TXN-100375,2025-05-08,North America,SMB,active,384.57,365.34,0
+TXN-100376,2025-05-17,Asia-Pacific,SMB,cancelled,202.04,202.04,1
+TXN-100377,2025-05-14,Asia-Pacific,Mid-Market,active,730.85,730.85,0
+TXN-100378,2025-03-23,Latin America,SMB,pending,261.46,261.46,0
+TXN-100379,2025-06-01,Asia-Pacific,Mid-Market,active,928.47,882.05,0
+TXN-100380,2025-08-21,Middle East,SMB,active,199.48,169.56,0
+TXN-100381,2025-12-07,Europe,Mid-Market,pending,474.04,474.04,0
+TXN-100382,2025-09-28,Asia-Pacific,Enterprise,cancelled,1020.18,1020.18,1
+TXN-100383,2025-02-01,Middle East,Mid-Market,cancelled,281.42,267.35,1
+TXN-100384,2025-03-26,Asia-Pacific,Consumer,active,69.48,66.01,0
+TXN-100385,2025-09-08,North America,Consumer,active,64.82,55.1,0
+TXN-100386,2025-08-01,Latin America,Enterprise,cancelled,1245.12,1058.35,1
+TXN-100387,2025-12-11,Asia-Pacific,Enterprise,active,1302.53,1172.28,0
+TXN-100388,2025-04-22,Middle East,Enterprise,active,1762.85,1498.42,0
+TXN-100389,2025-02-02,Middle East,Enterprise,active,1485.13,1262.36,1
+TXN-100390,2025-07-29,Europe,Mid-Market,pending,513.46,436.44,0
+TXN-100391,2025-07-15,Latin America,Consumer,active,62.03,62.03,0
+TXN-100392,2025-12-05,Middle East,Mid-Market,pending,673.79,606.41,1
+TXN-100393,2025-10-03,Latin America,Mid-Market,pending,401.97,381.87,0
+TXN-100394,2025-01-12,Asia-Pacific,Consumer,pending,116.63,99.14,0
+TXN-100395,2025-04-28,Europe,Consumer,active,103.59,98.41,0
+TXN-100396,2025-02-27,North America,Consumer,cancelled,70.62,70.62,1
+TXN-100397,2025-05-04,Europe,Enterprise,active,686.06,686.06,0
+TXN-100398,2025-12-11,North America,Mid-Market,pending,803.08,803.08,0
+TXN-100399,2025-04-30,Middle East,Mid-Market,active,582.82,553.68,0
+TXN-100400,2025-05-29,Europe,SMB,cancelled,327.36,294.62,1
+TXN-100401,2025-05-02,Asia-Pacific,Mid-Market,pending,360.84,342.8,0
+TXN-100402,2025-05-21,North America,Mid-Market,pending,510.09,433.58,0
+TXN-100403,2025-01-25,Asia-Pacific,Consumer,cancelled,80.1,72.09,1
+TXN-100404,2025-12-23,Latin America,Consumer,active,80.94,72.85,0
+TXN-100405,2025-10-03,Latin America,Mid-Market,active,532.49,479.24,0
+TXN-100406,2025-03-15,Latin America,Enterprise,cancelled,1386.85,1178.82,1
+TXN-100407,2025-08-02,Middle East,Mid-Market,active,439.86,417.87,0
+TXN-100408,2025-06-19,North America,Consumer,active,77.15,77.15,0
+TXN-100409,2025-04-08,North America,SMB,active,257.52,257.52,0
+TXN-100410,2025-04-07,Middle East,Mid-Market,active,677.17,643.31,0
+TXN-100411,2025-06-20,Asia-Pacific,Enterprise,active,1413.48,1342.81,0
+TXN-100412,2025-03-02,Latin America,Mid-Market,pending,431.3,409.74,0
+TXN-100413,2025-05-03,Middle East,SMB,active,154.12,131.0,0
+TXN-100414,2025-11-29,Asia-Pacific,SMB,active,329.85,296.87,0
+TXN-100415,2025-09-12,Latin America,Enterprise,pending,1299.69,1104.74,0
+TXN-100416,2025-06-13,Europe,SMB,active,203.22,172.74,1
+TXN-100417,2025-04-24,Europe,Enterprise,active,1665.35,1415.55,0
+TXN-100418,2025-04-11,Asia-Pacific,Mid-Market,active,617.35,586.48,0
+TXN-100419,2025-12-02,Asia-Pacific,SMB,active,323.71,275.15,0
+TXN-100420,2025-06-30,Europe,Mid-Market,pending,610.13,518.61,0
+TXN-100421,2025-10-05,North America,Enterprise,active,1818.22,1818.22,0
+TXN-100422,2025-07-31,Europe,Mid-Market,active,863.3,820.13,1
+TXN-100423,2025-09-16,Latin America,SMB,active,234.44,199.27,0
+TXN-100424,2025-01-09,North America,Consumer,active,99.43,99.43,0
+TXN-100425,2025-05-21,Middle East,SMB,active,290.34,246.79,0
+TXN-100426,2025-04-02,North America,Enterprise,cancelled,1610.59,1530.06,1
+TXN-100427,2025-05-04,Europe,SMB,active,189.69,170.72,0
+TXN-100428,2025-02-10,Asia-Pacific,Consumer,active,93.72,89.03,0
+TXN-100429,2025-04-26,Asia-Pacific,Enterprise,pending,1517.53,1517.53,1
+TXN-100430,2025-07-14,Latin America,Consumer,active,44.83,44.83,0
+TXN-100431,2025-02-12,Latin America,Consumer,pending,56.33,50.7,0
+TXN-100432,2025-02-18,Middle East,Enterprise,active,588.23,558.82,0
+TXN-100433,2025-12-21,Middle East,Consumer,active,74.61,74.61,0
+TXN-100434,2025-12-17,Asia-Pacific,Enterprise,active,1415.26,1273.73,1
+TXN-100435,2025-04-17,Middle East,Mid-Market,pending,825.35,701.55,0
+TXN-100436,2025-06-03,Europe,Mid-Market,cancelled,611.11,519.44,1
+TXN-100437,2025-12-13,Middle East,SMB,active,351.79,334.2,0
+TXN-100438,2025-12-19,North America,SMB,active,163.74,163.74,0
+TXN-100439,2025-02-08,Asia-Pacific,Consumer,active,45.93,45.93,0
+TXN-100440,2025-08-19,Latin America,Mid-Market,active,591.67,502.92,0
+TXN-100441,2025-12-15,Middle East,Consumer,active,87.68,78.91,0
+TXN-100442,2026-01-01,North America,Enterprise,active,1190.19,1130.68,0
+TXN-100443,2025-11-21,Europe,Consumer,active,38.65,34.78,1
+TXN-100444,2025-01-03,Asia-Pacific,Consumer,active,78.22,70.4,1
+TXN-100445,2025-02-14,Europe,Consumer,active,53.91,45.82,1
+TXN-100446,2025-02-15,Asia-Pacific,Enterprise,cancelled,1400.9,1260.81,1
+TXN-100447,2025-07-17,North America,SMB,active,272.91,231.97,0
+TXN-100448,2025-10-14,Europe,Mid-Market,pending,459.02,390.17,0
+TXN-100449,2025-05-18,Asia-Pacific,SMB,active,217.88,206.99,1
+TXN-100450,2025-08-11,Asia-Pacific,Consumer,active,58.82,50.0,0
+TXN-100451,2025-07-04,Asia-Pacific,Mid-Market,pending,590.6,502.01,0
+TXN-100452,2025-04-11,Latin America,Enterprise,active,1486.54,1337.89,1
+TXN-100453,2025-07-22,Asia-Pacific,Consumer,active,60.29,51.25,0
+TXN-100454,2025-11-30,Middle East,Mid-Market,active,675.61,608.05,0
+TXN-100455,2025-12-22,Europe,Consumer,active,69.39,65.92,0
+TXN-100456,2025-06-13,Asia-Pacific,Consumer,cancelled,64.14,60.93,1
+TXN-100457,2025-06-16,Latin America,SMB,active,243.31,218.98,1
+TXN-100458,2025-10-16,Europe,Mid-Market,pending,444.71,444.71,0
+TXN-100459,2025-08-25,Europe,Consumer,active,68.93,68.93,0
+TXN-100460,2025-07-29,Latin America,Mid-Market,pending,420.32,378.29,0
+TXN-100461,2025-12-04,Europe,Consumer,active,119.29,119.29,0
+TXN-100462,2025-11-03,Latin America,Consumer,cancelled,80.71,68.6,1
+TXN-100463,2025-10-06,North America,SMB,pending,206.27,206.27,1
+TXN-100464,2025-05-08,Asia-Pacific,Mid-Market,pending,632.1,632.1,0
+TXN-100465,2025-11-27,Latin America,SMB,active,242.98,242.98,1
+TXN-100466,2025-05-13,Europe,Mid-Market,active,566.85,510.17,0
+TXN-100467,2025-12-14,Middle East,Mid-Market,active,692.13,692.13,0
+TXN-100468,2025-06-01,Latin America,Enterprise,active,1427.25,1355.89,0
+TXN-100469,2025-06-25,Latin America,Mid-Market,cancelled,520.42,442.36,1
+TXN-100470,2025-06-28,Latin America,Enterprise,active,1027.25,873.16,0
+TXN-100471,2025-06-03,North America,Enterprise,active,1117.48,1005.73,0
+TXN-100472,2025-12-13,Europe,Mid-Market,cancelled,254.71,241.97,1
+TXN-100473,2025-10-10,Europe,SMB,cancelled,155.3,132.0,1
+TXN-100474,2025-08-25,Europe,Consumer,pending,107.34,101.97,0
+TXN-100475,2025-12-03,Latin America,Consumer,active,112.9,107.25,0
+TXN-100476,2025-08-08,Latin America,Enterprise,pending,1125.29,1069.03,0
+TXN-100477,2025-12-27,North America,Enterprise,cancelled,1372.97,1304.32,1
+TXN-100478,2025-07-07,Asia-Pacific,Mid-Market,active,646.69,646.69,0
+TXN-100479,2025-09-08,Middle East,SMB,cancelled,442.43,376.07,1
+TXN-100480,2025-11-09,Latin America,Enterprise,active,18430.44,16587.4,0
+TXN-100481,2025-11-13,Europe,SMB,cancelled,242.01,242.01,1
+TXN-100482,2025-12-11,Europe,SMB,active,190.28,180.77,0
+TXN-100483,2025-04-04,Asia-Pacific,Mid-Market,cancelled,359.03,305.18,1
+TXN-100484,2025-08-03,Middle East,Mid-Market,cancelled,630.52,535.94,1
+TXN-100485,2025-08-05,Europe,Consumer,pending,64.87,61.63,0
+TXN-100486,2025-09-08,Asia-Pacific,Mid-Market,active,386.66,347.99,0
+TXN-100487,2025-11-14,North America,SMB,active,209.59,178.15,0
+TXN-100488,2025-07-16,Middle East,Consumer,active,58.37,49.61,0
+TXN-100489,2025-08-16,Latin America,Mid-Market,active,853.07,853.07,0
+TXN-100490,2025-04-23,Asia-Pacific,Enterprise,active,1464.49,1391.27,0
+TXN-100491,2025-03-28,Latin America,Consumer,cancelled,79.84,79.84,1
+TXN-100492,2025-10-21,North America,SMB,cancelled,342.5,308.25,1
+TXN-100493,2025-10-05,North America,Consumer,cancelled,81.55,77.47,1
+TXN-100494,2025-08-06,North America,Mid-Market,active,470.81,470.81,0
+TXN-100495,2025-06-28,North America,Consumer,active,110.46,104.94,0
+TXN-100496,2025-10-29,Asia-Pacific,Consumer,active,90.78,86.24,0
+TXN-100497,2025-04-16,North America,SMB,cancelled,185.17,166.65,1
+TXN-100498,2025-11-02,Middle East,Mid-Market,active,571.45,514.31,0
+TXN-100499,2025-05-17,Middle East,Enterprise,active,937.31,796.71,0
+TXN-100500,2025-05-22,Europe,Mid-Market,active,392.58,372.95,0
+TXN-100501,2025-05-07,Latin America,Consumer,active,98.52,88.67,0
+TXN-100502,2025-07-12,Latin America,Enterprise,pending,1772.82,1772.82,0
+TXN-100503,2025-05-23,Asia-Pacific,Consumer,active,52.03,46.83,0
+TXN-100504,2025-02-17,Latin America,SMB,active,285.19,242.41,0
+TXN-100505,2025-08-08,Europe,Consumer,active,66.99,60.29,0
+TXN-100506,2025-06-22,Middle East,Mid-Market,cancelled,526.93,447.89,1
+TXN-100507,2025-06-25,North America,Enterprise,active,1022.28,868.94,1
+TXN-100508,2025-03-22,Latin America,Consumer,active,62.72,53.31,0
+TXN-100509,2025-12-19,Europe,SMB,active,253.03,227.73,1
+TXN-100510,2025-07-04,Asia-Pacific,Enterprise,active,950.71,903.17,1
+TXN-100511,2025-11-17,Asia-Pacific,Mid-Market,active,640.57,640.57,0
+TXN-100512,2025-01-01,Europe,Consumer,active,79.0,75.05,0
+TXN-100513,2025-09-23,Latin America,Enterprise,active,1128.32,1015.49,0
+TXN-100514,2025-08-05,Europe,Consumer,active,61.85,58.76,0
+TXN-100515,2025-02-22,North America,SMB,active,213.95,192.56,0
+TXN-100516,2025-03-10,Europe,Enterprise,cancelled,1426.62,1426.62,1
+TXN-100517,2025-11-09,Europe,Consumer,active,90.02,85.52,0
+TXN-100518,2025-03-19,Latin America,Consumer,active,60.45,60.45,0
+TXN-100519,2025-03-13,North America,Consumer,active,81.99,69.69,0
+TXN-100520,2025-03-13,Europe,SMB,pending,296.96,296.96,0
+TXN-100521,2025-11-04,Middle East,SMB,pending,145.66,145.66,0
+TXN-100522,2025-12-04,Asia-Pacific,Mid-Market,cancelled,681.5,647.42,1
+TXN-100523,2025-07-20,Asia-Pacific,Enterprise,active,1001.21,851.03,0
+TXN-100524,2025-05-04,Latin America,Enterprise,cancelled,1371.18,1371.18,1
+TXN-100525,2025-07-04,Asia-Pacific,Mid-Market,active,485.51,412.68,0
+TXN-100526,2025-12-16,Europe,Consumer,active,43.9,43.9,0
+TXN-100527,2025-01-08,Asia-Pacific,Mid-Market,active,355.87,355.87,0
+TXN-100528,2025-07-23,Middle East,SMB,pending,253.01,215.06,0
+TXN-100529,2025-07-25,North America,Mid-Market,active,638.96,638.96,0
+TXN-100530,2025-09-19,Europe,Mid-Market,cancelled,464.35,417.92,1
+TXN-100531,2025-07-20,Middle East,Enterprise,active,1391.58,1182.84,0
+TXN-100532,2025-05-03,North America,Mid-Market,active,350.77,298.15,1
+TXN-100533,2025-11-10,Middle East,Enterprise,active,1180.18,1121.17,1
+TXN-100534,2025-12-29,Europe,Enterprise,active,836.7,711.2,0
+TXN-100535,2025-09-25,Middle East,SMB,active,209.26,188.33,0
+TXN-100536,2025-05-18,North America,Enterprise,active,1214.22,1032.09,0
+TXN-100537,2025-02-02,Asia-Pacific,Enterprise,active,941.88,800.6,0
+TXN-100538,2025-01-29,Latin America,Mid-Market,active,542.32,515.2,0
+TXN-100539,2025-02-22,Middle East,Enterprise,active,1501.89,1501.89,1
+TXN-100540,2025-01-07,Europe,Enterprise,active,1026.93,924.24,0
+TXN-100541,2025-03-18,Europe,Enterprise,cancelled,1450.71,1233.1,1
+TXN-100542,2025-04-25,Asia-Pacific,Mid-Market,active,430.54,387.49,0
+TXN-100543,2025-02-09,Middle East,SMB,active,283.11,283.11,0
+TXN-100544,2025-09-22,North America,Consumer,active,108.83,92.51,0
+TXN-100545,2025-06-09,Asia-Pacific,Enterprise,cancelled,458.51,389.73,1
+TXN-100546,2025-01-05,Asia-Pacific,Mid-Market,active,480.47,432.42,0
+TXN-100547,2025-05-05,Latin America,SMB,cancelled,286.07,243.16,1
+TXN-100548,2025-04-11,Middle East,Mid-Market,active,569.54,569.54,0
+TXN-100549,2025-01-13,Europe,SMB,pending,273.2,273.2,0
+TXN-100550,2025-01-01,Latin America,SMB,active,212.25,201.64,0
+TXN-100551,2025-05-02,Latin America,Consumer,active,81.73,77.64,0
+TXN-100552,2025-02-17,North America,Mid-Market,cancelled,576.65,490.15,1
+TXN-100553,2025-12-25,Asia-Pacific,Consumer,pending,103.36,103.36,0
+TXN-100554,2025-09-16,Europe,Consumer,active,85.09,85.09,0
+TXN-100555,2025-03-08,Europe,SMB,active,271.1,243.99,0
+TXN-100556,2025-07-21,Asia-Pacific,SMB,active,224.26,201.83,0
+TXN-100557,2025-04-14,Europe,Enterprise,active,1053.72,1053.72,0
+TXN-100558,2025-08-27,Asia-Pacific,Consumer,active,71.35,64.22,0
+TXN-100559,2025-04-17,Latin America,SMB,active,274.65,247.18,0
+TXN-100560,2025-02-16,Europe,SMB,pending,223.69,223.69,0
+TXN-100561,2025-06-17,Europe,Enterprise,pending,1286.93,1222.58,0
+TXN-100562,2025-07-22,Middle East,Enterprise,pending,1822.62,1640.36,0
+TXN-100563,2025-03-31,North America,Consumer,active,97.42,92.55,1
+TXN-100564,2025-02-22,Europe,Enterprise,active,1102.19,1102.19,0
+TXN-100565,2025-04-24,Europe,Mid-Market,active,780.18,702.16,0
+TXN-100566,2025-11-27,North America,SMB,active,224.5,224.5,0
+TXN-100567,2025-04-12,Latin America,Mid-Market,active,294.28,264.85,0
+TXN-100568,2025-08-25,North America,Mid-Market,cancelled,448.79,381.47,1
+TXN-100569,2025-07-22,Latin America,Enterprise,active,638.76,542.95,0
+TXN-100570,2025-04-20,Europe,SMB,active,228.03,193.83,0
+TXN-100571,2025-01-18,Middle East,Mid-Market,pending,602.76,542.48,0
+TXN-100572,2025-10-09,Latin America,Enterprise,active,1702.93,1532.64,0
+TXN-100573,2025-08-03,Europe,Mid-Market,pending,649.04,649.04,0
+TXN-100574,2026-01-01,Asia-Pacific,Consumer,cancelled,75.62,64.28,1
+TXN-100575,2025-06-26,Middle East,SMB,active,301.84,271.66,0
+TXN-100576,2025-06-13,Middle East,Mid-Market,active,268.33,241.5,1
+TXN-100577,2025-08-30,Middle East,SMB,cancelled,264.73,251.49,1
+TXN-100578,2025-03-23,North America,Mid-Market,pending,715.63,679.85,0
+TXN-100579,2025-01-29,Europe,Consumer,active,50.43,47.91,0
+TXN-100580,2025-10-31,Asia-Pacific,SMB,cancelled,321.48,321.48,1
+TXN-100581,2025-12-27,Asia-Pacific,Mid-Market,cancelled,650.77,618.23,1
+TXN-100582,2025-09-10,Middle East,SMB,active,224.04,190.43,1
+TXN-100583,2025-01-29,Europe,Mid-Market,active,694.92,590.68,1
+TXN-100584,2025-11-11,Europe,Mid-Market,active,940.6,893.57,0
+TXN-100585,2025-06-15,North America,Enterprise,active,1254.56,1191.83,0
+TXN-100586,2025-09-27,Asia-Pacific,Enterprise,active,1274.47,1083.3,0
+TXN-100587,2025-06-22,Asia-Pacific,SMB,active,221.29,210.23,0
+TXN-100588,2025-08-12,Latin America,SMB,active,196.88,177.19,0
+TXN-100589,2025-10-29,Europe,Consumer,active,96.61,86.95,0
+TXN-100590,2025-01-01,Middle East,Consumer,cancelled,62.88,62.88,1
+TXN-100591,2025-04-04,Middle East,SMB,cancelled,254.47,241.75,1
+TXN-100592,2025-11-24,Middle East,Enterprise,active,1056.7,1003.87,0
+TXN-100593,2025-02-09,Europe,SMB,active,279.94,265.94,0
+TXN-100594,2025-02-15,Asia-Pacific,Consumer,active,86.67,78.0,0
+TXN-100595,2025-12-21,North America,SMB,active,314.85,314.85,0
+TXN-100596,2025-01-25,Latin America,Consumer,pending,69.8,59.33,0
+TXN-100597,2025-07-31,Latin America,Consumer,active,74.6,63.41,1
+TXN-100598,2025-09-03,Middle East,Mid-Market,active,453.19,385.21,1
+TXN-100599,2025-01-18,Asia-Pacific,Enterprise,active,1066.71,960.04,0
+TXN-100600,2025-02-07,Asia-Pacific,Mid-Market,active,656.6,623.77,0
+TXN-100601,2025-10-08,North America,SMB,cancelled,297.31,252.71,1
+TXN-100602,2025-12-27,North America,Consumer,pending,61.56,58.48,0
+TXN-100603,2025-08-11,Europe,Enterprise,active,1460.88,1314.79,0
+TXN-100604,2025-04-08,Latin America,SMB,pending,334.73,301.26,0
+TXN-100605,2025-02-19,North America,Consumer,cancelled,88.27,75.03,1
+TXN-100606,2025-03-20,North America,SMB,active,367.3,312.2,1
+TXN-100607,2025-12-05,Middle East,Consumer,active,64.52,64.52,1
+TXN-100608,2025-03-29,Asia-Pacific,Enterprise,active,826.6,826.6,0
+TXN-100609,2025-07-23,Latin America,Consumer,pending,44.43,39.99,1
+TXN-100610,2025-10-06,Latin America,Mid-Market,active,824.41,700.75,0
+TXN-100611,2025-08-17,North America,SMB,active,290.9,247.26,0
+TXN-100612,2025-05-18,Middle East,Enterprise,active,1183.32,1183.32,1
+TXN-100613,2025-06-26,Middle East,Consumer,cancelled,85.6,81.32,1
+TXN-100614,2025-10-11,North America,Consumer,cancelled,57.49,48.87,1
+TXN-100615,2025-10-02,Latin America,Mid-Market,active,966.86,870.17,1
+TXN-100616,2026-01-01,North America,Mid-Market,active,619.38,526.47,0
+TXN-100617,2025-03-27,Europe,Mid-Market,active,616.41,616.41,0
+TXN-100618,2025-12-16,Latin America,Mid-Market,pending,708.86,673.42,0
+TXN-100619,2025-05-13,Asia-Pacific,Enterprise,active,1344.3,1142.65,0
+TXN-100620,2025-10-10,Asia-Pacific,SMB,cancelled,263.99,224.39,1
+TXN-100621,2025-01-07,Middle East,Consumer,active,64.19,54.56,0
+TXN-100622,2025-10-18,Middle East,Enterprise,active,1341.44,1341.44,0
+TXN-100623,2025-10-02,Asia-Pacific,Consumer,active,117.64,99.99,0
+TXN-100624,2025-10-20,Middle East,Consumer,active,106.91,101.56,0
+TXN-100625,2025-03-15,Middle East,Consumer,active,111.86,95.08,0
+TXN-100626,2025-06-19,Europe,Enterprise,pending,1046.64,889.64,0
+TXN-100627,2025-07-10,North America,SMB,active,188.15,169.34,0
+TXN-100628,2025-09-09,North America,Mid-Market,active,581.13,523.02,0
+TXN-100629,2025-08-15,Asia-Pacific,SMB,pending,253.48,215.46,0
+TXN-100630,2025-02-15,Europe,Consumer,active,101.88,86.6,0
+TXN-100631,2025-09-22,Asia-Pacific,Enterprise,cancelled,692.26,657.65,1
+TXN-100632,2025-02-03,Asia-Pacific,Consumer,active,110.59,110.59,0
+TXN-100633,2025-04-13,North America,Mid-Market,active,576.3,489.85,1
+TXN-100634,2025-07-04,Europe,SMB,active,223.32,189.82,0
+TXN-100635,2025-11-22,North America,Enterprise,active,896.37,806.73,0
+TXN-100636,2025-08-17,Europe,Consumer,cancelled,46.9,42.21,1
+TXN-100637,2025-06-26,Europe,SMB,pending,301.45,301.45,0
+TXN-100638,2025-07-17,North America,Mid-Market,cancelled,611.0,580.45,1
+TXN-100639,2025-04-24,Europe,Mid-Market,active,406.51,345.53,0
+TXN-100640,2025-12-16,North America,Consumer,active,54.1,51.39,0
+TXN-100641,2025-01-05,Europe,SMB,cancelled,229.01,206.11,1
+TXN-100642,2025-12-31,Asia-Pacific,Consumer,active,113.38,102.04,0
+TXN-100643,2025-04-22,Latin America,SMB,pending,233.78,198.71,0
+TXN-100644,2025-01-04,Middle East,SMB,cancelled,156.05,140.45,1
+TXN-100645,2025-06-02,North America,Consumer,active,75.09,67.58,0
+TXN-100646,2025-11-24,Asia-Pacific,SMB,active,232.95,209.66,0
+TXN-100647,2025-09-22,Europe,Enterprise,cancelled,390.93,332.29,1
+TXN-100648,2025-12-05,Asia-Pacific,Mid-Market,pending,591.86,591.86,0
+TXN-100649,2025-06-01,Asia-Pacific,Consumer,active,75.38,64.07,0
+TXN-100650,2025-10-26,Middle East,Mid-Market,active,704.43,669.21,0
+TXN-100651,2025-11-23,Latin America,SMB,cancelled,365.56,329.0,1
+TXN-100652,2025-03-29,Middle East,Mid-Market,active,768.98,768.98,0
+TXN-100653,2025-05-13,Middle East,Mid-Market,pending,559.67,503.7,0
+TXN-100654,2025-04-24,Asia-Pacific,Mid-Market,pending,434.02,390.62,0
+TXN-100655,2025-06-19,Asia-Pacific,SMB,cancelled,410.83,369.75,1
+TXN-100656,2025-08-26,North America,Consumer,active,81.18,81.18,0
+TXN-100657,2025-04-10,Middle East,Enterprise,pending,1204.18,1023.55,0
+TXN-100658,2025-07-31,North America,Mid-Market,active,596.38,566.56,0
+TXN-100659,2025-10-19,Latin America,Mid-Market,active,629.71,598.22,0
+TXN-100660,2025-09-07,Asia-Pacific,Mid-Market,active,578.35,578.35,1
+TXN-100661,2025-05-21,Europe,Mid-Market,cancelled,513.95,488.25,1
+TXN-100662,2025-09-08,North America,Mid-Market,cancelled,517.97,440.27,1
+TXN-100663,2025-11-21,Latin America,Consumer,active,79.34,67.44,0
+TXN-100664,2025-01-20,Middle East,Mid-Market,pending,518.49,466.64,0
+TXN-100665,2025-06-14,Middle East,Mid-Market,active,493.07,493.07,0
+TXN-100666,2025-05-08,Europe,SMB,active,256.65,243.82,1
+TXN-100667,2025-09-15,Middle East,SMB,active,234.06,234.06,0
+TXN-100668,2025-06-02,Asia-Pacific,Consumer,pending,110.08,99.07,0
+TXN-100669,2025-12-18,Europe,SMB,active,84.31,75.88,0
+TXN-100670,2025-03-26,Latin America,Enterprise,active,1527.45,1451.08,0
+TXN-100671,2025-03-09,Europe,Enterprise,cancelled,1573.83,1495.14,1
+TXN-100672,2025-03-05,Asia-Pacific,Enterprise,active,577.98,520.18,0
+TXN-100673,2025-11-16,North America,Enterprise,pending,1097.19,1097.19,0
+TXN-100674,2025-01-11,North America,Enterprise,active,1088.57,925.28,0
+TXN-100675,2025-10-08,Asia-Pacific,Consumer,pending,51.85,49.26,0
+TXN-100676,2025-12-18,North America,SMB,active,201.39,201.39,0
+TXN-100677,2025-05-19,Middle East,Mid-Market,active,433.41,433.41,0
+TXN-100678,2025-11-13,North America,SMB,active,359.52,359.52,0
+TXN-100679,2025-11-08,Europe,SMB,cancelled,308.48,293.06,1
+TXN-100680,2025-07-03,Latin America,SMB,active,329.47,329.47,0
+TXN-100681,2025-04-17,Latin America,SMB,active,295.1,295.1,1
+TXN-100682,2025-02-15,North America,Consumer,active,57.42,57.42,0
+TXN-100683,2025-02-08,North America,SMB,pending,217.22,206.36,0
+TXN-100684,2025-06-01,Asia-Pacific,Consumer,active,89.79,89.79,0
+TXN-100685,2025-01-21,Asia-Pacific,SMB,pending,173.62,156.26,0
+TXN-100686,2025-03-01,North America,Enterprise,active,1413.9,1343.2,0
+TXN-100687,2025-03-29,Asia-Pacific,SMB,active,234.98,211.48,0
+TXN-100688,2025-02-17,Asia-Pacific,SMB,active,226.57,226.57,0
+TXN-100689,2025-08-22,Asia-Pacific,Consumer,pending,94.22,80.09,0
+TXN-100690,2025-11-29,Europe,Enterprise,active,1333.28,1333.28,0
+TXN-100691,2025-03-23,North America,Consumer,cancelled,72.78,61.86,1
+TXN-100692,2025-10-19,Latin America,Mid-Market,cancelled,773.9,657.81,1
+TXN-100693,2025-07-03,Middle East,Enterprise,pending,875.68,831.9,0
+TXN-100694,2025-09-07,North America,Consumer,active,92.32,92.32,1
+TXN-100695,2025-12-02,Asia-Pacific,Enterprise,pending,1377.93,1309.03,0
+TXN-100696,2025-12-09,Asia-Pacific,Enterprise,active,1107.14,1051.78,0
+TXN-100697,2025-12-06,Latin America,Mid-Market,cancelled,648.92,648.92,1
+TXN-100698,2025-01-06,Europe,Consumer,active,54.98,52.23,1
+TXN-100699,2025-09-09,Asia-Pacific,Mid-Market,active,738.6,664.74,1
+TXN-100700,2025-04-25,Middle East,Consumer,active,76.3,72.48,1
+TXN-100701,2025-08-16,Middle East,Consumer,active,69.55,59.12,0
+TXN-100702,2025-03-02,Latin America,Enterprise,active,1514.7,1287.5,0
+TXN-100703,2025-10-13,Middle East,Enterprise,active,988.7,889.83,0
+TXN-100704,2025-10-15,Europe,Consumer,active,51.83,46.65,0
+TXN-100705,2025-04-25,Latin America,SMB,cancelled,152.71,129.8,1
+TXN-100706,2025-12-03,Asia-Pacific,Consumer,active,92.12,92.12,0
+TXN-100707,2025-04-24,North America,SMB,active,169.97,152.97,0
+TXN-100708,2025-07-11,North America,Enterprise,active,1726.44,1467.47,0
+TXN-100709,2025-07-29,North America,SMB,cancelled,119.88,113.89,1
+TXN-100710,2025-04-07,North America,Consumer,active,113.93,96.84,0
+TXN-100711,2025-04-08,Asia-Pacific,Enterprise,active,1263.31,1263.31,0
+TXN-100712,2025-12-11,Middle East,Enterprise,active,14051.880000000001,11944.1,0
+TXN-100713,2025-09-16,Europe,Consumer,active,69.1,69.1,0
+TXN-100714,2025-08-10,Middle East,Consumer,cancelled,87.98,83.58,1
+TXN-100715,2025-12-21,Middle East,Mid-Market,pending,594.35,564.63,1
+TXN-100716,2025-12-03,Middle East,SMB,cancelled,318.96,271.12,1
+TXN-100717,2025-08-03,Middle East,Mid-Market,active,617.13,524.56,0
+TXN-100718,2025-05-31,Latin America,Mid-Market,active,622.55,529.17,0
+TXN-100719,2025-09-20,Asia-Pacific,SMB,pending,227.27,215.91,0
+TXN-100720,2025-11-16,Asia-Pacific,SMB,pending,246.44,234.12,0
+TXN-100721,2025-11-29,Europe,SMB,pending,269.24,269.24,0
+TXN-100722,2025-10-15,Latin America,Consumer,pending,45.8,41.22,0
+TXN-100723,2025-08-05,North America,Enterprise,active,795.54,676.21,0
+TXN-100724,2025-12-10,North America,Mid-Market,active,711.49,675.92,0
+TXN-100725,2025-12-16,Asia-Pacific,Mid-Market,active,625.63,563.07,0
+TXN-100726,2025-10-05,North America,SMB,active,238.5,238.5,0
+TXN-100727,2025-12-12,Middle East,Mid-Market,pending,602.77,512.35,0
+TXN-100728,2025-12-23,Asia-Pacific,Enterprise,active,1304.27,1108.63,0
+TXN-100729,2025-12-17,Asia-Pacific,Enterprise,active,1038.07,934.26,0
+TXN-100730,2025-08-15,Europe,SMB,cancelled,201.36,191.29,1
+TXN-100731,2025-04-10,Asia-Pacific,Consumer,active,83.92,83.92,0
+TXN-100732,2025-03-30,Middle East,Enterprise,active,906.49,906.49,0
+TXN-100733,2025-10-12,Asia-Pacific,Mid-Market,active,661.24,595.12,1
+TXN-100734,2025-08-27,Europe,Enterprise,active,689.22,620.3,0
+TXN-100735,2025-11-17,Middle East,SMB,active,314.32,282.89,1
+TXN-100736,2025-12-29,Asia-Pacific,Mid-Market,active,670.89,670.89,0
+TXN-100737,2025-03-23,Latin America,Consumer,active,85.12,76.61,0
+TXN-100738,2025-04-20,Asia-Pacific,SMB,active,311.42,280.28,0
+TXN-100739,2025-11-13,Middle East,Consumer,cancelled,113.31,113.31,1
+TXN-100740,2025-02-28,Asia-Pacific,Consumer,active,100.29,95.28,0
+TXN-100741,2025-12-16,Asia-Pacific,Consumer,active,43.18,36.7,0
+TXN-100742,2025-05-25,North America,SMB,cancelled,170.03,144.53,1
+TXN-100743,2025-09-07,North America,SMB,pending,210.95,200.4,0
+TXN-100744,2025-02-12,North America,Mid-Market,cancelled,603.91,603.91,1
+TXN-100745,2025-11-17,North America,Mid-Market,pending,677.65,643.77,0
+TXN-100746,2025-08-06,North America,Mid-Market,cancelled,491.14,417.47,1
+TXN-100747,2025-11-28,North America,Mid-Market,active,628.02,533.82,0
+TXN-100748,2025-01-20,North America,Enterprise,active,973.39,924.72,0
+TXN-100749,2025-10-13,North America,Mid-Market,active,508.27,432.03,0
+TXN-100750,2025-11-19,Latin America,Consumer,active,51.87,51.87,0
+TXN-100751,2025-03-02,Middle East,Enterprise,pending,923.03,923.03,0
+TXN-100752,2025-10-27,North America,Enterprise,active,794.49,794.49,0
+TXN-100753,2025-12-18,Asia-Pacific,Enterprise,active,907.24,771.15,0
+TXN-100754,2025-12-05,North America,Consumer,active,101.07,96.02,0
+TXN-100755,2025-07-20,Middle East,SMB,pending,190.66,181.13,0
+TXN-100756,2025-11-28,Asia-Pacific,Enterprise,cancelled,1989.71,1890.22,1
+TXN-100757,2025-03-05,North America,Enterprise,cancelled,1348.0,1145.8,1
+TXN-100758,2025-10-03,Middle East,Enterprise,active,1255.45,1192.68,0
+TXN-100759,2025-06-26,Europe,Consumer,pending,62.83,59.69,0
+TXN-100760,2025-04-24,Middle East,SMB,active,293.77,293.77,0
+TXN-100761,2025-10-18,North America,Consumer,pending,68.49,68.49,0
+TXN-100762,2025-02-04,Asia-Pacific,Enterprise,active,1236.6,1051.11,0
+TXN-100763,2025-07-02,Europe,Mid-Market,active,984.01,885.61,0
+TXN-100764,2025-04-10,Asia-Pacific,Consumer,active,78.08,70.27,0
+TXN-100765,2025-06-06,Middle East,Mid-Market,cancelled,772.39,695.15,1
+TXN-100766,2025-06-11,Latin America,Mid-Market,active,494.52,445.07,0
+TXN-100767,2025-04-24,Latin America,SMB,active,247.81,235.42,0
+TXN-100768,2025-06-19,Latin America,Consumer,active,115.42,103.88,0
+TXN-100769,2025-09-07,Middle East,Enterprise,active,1011.91,1011.91,0
+TXN-100770,2025-03-13,Middle East,Mid-Market,active,871.87,871.87,0
+TXN-100771,2025-01-10,Middle East,Enterprise,cancelled,1412.33,1200.48,1
+TXN-100772,2025-10-30,Europe,Enterprise,cancelled,1031.26,928.13,1
+TXN-100773,2025-10-06,Middle East,Consumer,pending,92.65,88.02,0
+TXN-100774,2025-04-25,Middle East,SMB,active,310.78,264.16,0
+TXN-100775,2025-02-16,Latin America,SMB,cancelled,288.86,288.86,1
+TXN-100776,2025-12-06,Europe,Mid-Market,cancelled,364.47,346.25,1
+TXN-100777,2025-08-17,Europe,Mid-Market,cancelled,490.93,466.38,1
+TXN-100778,2025-09-05,Asia-Pacific,Enterprise,active,1125.74,956.88,0
+TXN-100779,2025-05-16,Asia-Pacific,Mid-Market,active,588.83,559.39,0
+TXN-100780,2025-07-04,Latin America,Consumer,active,92.41,92.41,1
+TXN-100781,2025-11-29,Asia-Pacific,Enterprise,pending,1253.31,1127.98,0
+TXN-100782,2025-05-15,Middle East,Mid-Market,active,399.7,339.75,0
+TXN-100783,2025-12-01,North America,SMB,active,273.76,260.07,0
+TXN-100784,2025-06-30,Asia-Pacific,Consumer,active,92.21,92.21,0
+TXN-100785,2025-03-13,Latin America,Mid-Market,active,683.97,683.97,0
+TXN-100786,2025-05-24,Europe,Mid-Market,active,762.12,724.01,0
+TXN-100787,2025-03-02,Europe,Consumer,active,96.68,96.68,0
+TXN-100788,2025-09-03,Latin America,Mid-Market,cancelled,668.88,635.44,1
+TXN-100789,2025-11-28,Latin America,Enterprise,active,1178.95,1178.95,0
+TXN-100790,2025-10-31,Europe,Mid-Market,pending,350.86,350.86,0
+TXN-100791,2025-03-17,North America,Mid-Market,active,664.44,631.22,0
+TXN-100792,2025-07-27,Middle East,Enterprise,pending,1262.31,1136.08,0
+TXN-100793,2025-04-21,Latin America,Consumer,active,85.43,81.16,0
+TXN-100794,2025-07-30,Middle East,Mid-Market,cancelled,408.49,388.07,1
+TXN-100795,2025-11-16,Middle East,SMB,active,182.43,164.19,0
+TXN-100796,2025-11-02,Middle East,Enterprise,active,1515.95,1288.56,0
+TXN-100797,2025-02-25,North America,Mid-Market,cancelled,594.07,504.96,1
+TXN-100798,2025-03-18,Middle East,Enterprise,active,1404.45,1193.78,0
+TXN-100799,2025-11-04,North America,Enterprise,active,1208.5,1027.22,0
+TXN-100800,2025-11-05,Middle East,Enterprise,pending,1208.93,1027.59,0
+TXN-100801,2025-07-09,North America,Consumer,active,98.77,83.95,0
+TXN-100802,2025-07-15,Asia-Pacific,Enterprise,active,1045.19,992.93,0
+TXN-100803,2025-04-30,North America,SMB,cancelled,256.01,217.61,1
+TXN-100804,2025-05-12,Europe,Enterprise,pending,1061.32,1061.32,0
+TXN-100805,2025-03-02,Middle East,Enterprise,active,1069.65,1016.17,0
+TXN-100806,2025-06-11,Latin America,SMB,active,230.68,219.15,0
+TXN-100807,2025-10-27,Asia-Pacific,SMB,cancelled,263.88,224.3,1
+TXN-100808,2025-10-17,Asia-Pacific,SMB,pending,220.08,187.07,0
+TXN-100809,2025-07-31,Middle East,Consumer,active,105.12,94.61,0
+TXN-100810,2025-09-05,Asia-Pacific,SMB,cancelled,194.09,174.68,1
+TXN-100811,2025-12-28,Latin America,Mid-Market,pending,571.97,571.97,0
+TXN-100812,2025-08-17,Europe,Enterprise,active,1068.08,907.87,0
+TXN-100813,2025-10-09,Middle East,Enterprise,active,1634.09,1388.98,0
+TXN-100814,2025-01-03,North America,Mid-Market,active,629.48,535.06,1
+TXN-100815,2025-05-15,Europe,SMB,active,314.49,314.49,0
+TXN-100816,2025-07-25,Middle East,SMB,pending,157.15,157.15,0
+TXN-100817,2025-03-31,Latin America,Consumer,active,85.34,81.07,0
+TXN-100818,2025-09-23,Asia-Pacific,Mid-Market,active,733.44,696.77,0
+TXN-100819,2025-12-12,North America,SMB,active,255.14,255.14,0
+TXN-100820,2025-02-14,Asia-Pacific,Consumer,active,101.31,86.11,0
+TXN-100821,2025-04-13,Middle East,Enterprise,pending,1044.81,1044.81,0
+TXN-100822,2025-10-09,Asia-Pacific,SMB,active,338.08,304.27,0
+TXN-100823,2025-04-10,Latin America,Consumer,cancelled,125.98,125.98,1
+TXN-100824,2025-05-14,Europe,Consumer,cancelled,72.74,72.74,1
+TXN-100825,2025-10-14,North America,SMB,active,222.16,222.16,0
+TXN-100826,2025-05-12,Middle East,SMB,pending,340.84,289.71,0
+TXN-100827,2025-10-16,Latin America,Mid-Market,active,836.94,711.4,0
+TXN-100828,2025-10-28,North America,Consumer,active,69.54,62.59,1
+TXN-100829,2025-11-21,Europe,Mid-Market,active,536.97,456.42,0
+TXN-100830,2025-09-22,Middle East,Enterprise,pending,1115.46,1003.91,0
+TXN-100831,2025-02-17,Latin America,SMB,active,165.97,157.67,0
+TXN-100832,2025-07-01,Europe,SMB,active,192.58,182.95,0
+TXN-100833,2025-04-13,Europe,Mid-Market,active,449.38,426.91,0
+TXN-100834,2025-05-08,Middle East,SMB,active,202.01,202.01,1
+TXN-100835,2025-02-10,Latin America,Enterprise,cancelled,1189.59,1189.59,1
+TXN-100836,2025-09-04,Asia-Pacific,SMB,active,264.64,238.18,0
+TXN-100837,2025-09-19,Asia-Pacific,Consumer,active,111.01,105.46,1
+TXN-100838,2025-08-05,Latin America,Enterprise,cancelled,900.49,810.44,1
+TXN-100839,2025-07-21,Europe,Consumer,active,99.69,84.74,0
+TXN-100840,2025-01-05,North America,Mid-Market,active,567.9,567.9,0
+TXN-100841,2025-11-10,Asia-Pacific,Mid-Market,cancelled,592.58,533.32,1
+TXN-100842,2025-05-02,Asia-Pacific,Consumer,cancelled,93.5,84.15,1
+TXN-100843,2025-07-07,Europe,Consumer,active,57.55,54.67,0
+TXN-100844,2025-07-10,Asia-Pacific,Consumer,active,87.65,74.5,0
+TXN-100845,2025-03-09,Middle East,Mid-Market,active,624.97,562.47,0
+TXN-100846,2025-10-12,Latin America,Consumer,active,89.85,85.36,0
+TXN-100847,2025-03-18,Latin America,Enterprise,active,1286.75,1093.74,0
+TXN-100848,2025-11-19,Middle East,SMB,active,403.46,363.11,0
+TXN-100849,2025-10-18,North America,Consumer,active,67.25,63.89,1
+TXN-100850,2025-05-11,Latin America,Enterprise,active,1040.7,936.63,0
+TXN-100851,2025-07-04,Middle East,SMB,active,211.05,211.05,0
+TXN-100852,2025-06-29,Middle East,Mid-Market,cancelled,516.68,490.85,1
+TXN-100853,2025-05-26,Asia-Pacific,SMB,pending,210.16,178.64,0
+TXN-100854,2025-08-17,North America,Consumer,cancelled,103.78,93.4,1
+TXN-100855,2025-08-26,Europe,Mid-Market,pending,813.08,731.77,0
+TXN-100856,2025-11-10,Middle East,Consumer,active,68.59,68.59,0
+TXN-100857,2025-04-27,Asia-Pacific,SMB,pending,197.98,178.18,0
+TXN-100858,2025-11-06,Latin America,SMB,active,279.46,251.51,0
+TXN-100859,2025-09-24,Latin America,Consumer,active,68.96,65.51,0
+TXN-100860,2025-03-06,Europe,SMB,pending,289.56,289.56,0
+TXN-100861,2025-07-23,North America,Enterprise,active,1260.88,1071.75,0
+TXN-100862,2025-01-14,Latin America,Enterprise,active,745.28,670.75,0
+TXN-100863,2025-02-13,Latin America,SMB,active,346.72,329.38,0
+TXN-100864,2025-08-15,Europe,Mid-Market,cancelled,869.38,825.91,1
+TXN-100865,2025-01-15,North America,SMB,active,211.7,179.94,0
+TXN-100866,2025-10-04,Asia-Pacific,Consumer,active,72.25,68.64,0
+TXN-100867,2025-08-22,Middle East,Consumer,cancelled,85.72,77.15,1
+TXN-100868,2025-06-27,Latin America,Mid-Market,active,650.17,552.64,0
+TXN-100869,2025-07-31,Asia-Pacific,Mid-Market,active,698.78,698.78,1
+TXN-100870,2025-03-11,Asia-Pacific,SMB,active,375.64,375.64,0
+TXN-100871,2025-09-09,Latin America,SMB,active,238.94,203.1,0
+TXN-100872,2025-11-02,Europe,Enterprise,cancelled,960.51,864.46,1
+TXN-100873,2025-04-07,Latin America,Consumer,active,52.41,49.79,0
+TXN-100874,2025-11-27,Latin America,Consumer,active,65.38,58.84,1
+TXN-100875,2025-11-17,Europe,SMB,active,247.93,223.14,0
+TXN-100876,2025-02-05,Europe,Mid-Market,active,869.18,869.18,0
+TXN-100877,2025-11-13,Latin America,SMB,pending,217.65,185.0,0
+TXN-100878,2025-01-10,Europe,Enterprise,cancelled,1267.14,1267.14,1
+TXN-100879,2025-04-06,North America,SMB,active,248.97,236.52,0
+TXN-100880,2025-01-05,Europe,Enterprise,active,1556.52,1556.52,0
+TXN-100881,2025-06-25,Latin America,SMB,active,407.93,367.14,0
+TXN-100882,2025-01-17,Asia-Pacific,Enterprise,active,1040.74,1040.74,0
+TXN-100883,2025-07-20,North America,Consumer,active,70.21,66.7,0
+TXN-100884,2025-05-09,Latin America,Enterprise,active,1513.25,1437.59,0
+TXN-100885,2025-08-15,Europe,Enterprise,active,1404.57,1193.88,0
+TXN-100886,2025-02-18,Middle East,Mid-Market,active,877.01,745.46,0
+TXN-100887,2025-06-09,Asia-Pacific,Mid-Market,pending,687.59,687.59,0
+TXN-100888,2025-10-09,Middle East,Enterprise,active,1092.21,928.38,0
+TXN-100889,2025-04-12,Asia-Pacific,Enterprise,pending,1377.2,1308.34,0
+TXN-100890,2025-05-01,Latin America,SMB,active,319.29,303.33,0
+TXN-100891,2025-10-27,North America,Consumer,active,96.41,96.41,0
+TXN-100892,2025-10-25,Latin America,Mid-Market,active,676.09,676.09,0
+TXN-100893,2025-09-13,North America,SMB,pending,316.67,316.67,1
+TXN-100894,2025-11-27,Europe,Enterprise,active,1550.79,1318.17,0
+TXN-100895,2025-10-13,Asia-Pacific,Consumer,pending,107.64,102.26,1
+TXN-100896,2025-07-13,Asia-Pacific,Mid-Market,active,697.31,697.31,0
+TXN-100897,2025-08-13,Middle East,SMB,cancelled,239.56,203.63,1
+TXN-100898,2025-04-08,Middle East,Mid-Market,cancelled,622.01,559.81,1
+TXN-100899,2025-06-15,Latin America,SMB,cancelled,325.41,309.14,1
+TXN-100900,2025-02-05,Middle East,Mid-Market,active,477.46,429.71,0
+TXN-100901,2025-10-05,Asia-Pacific,Consumer,active,87.37,74.26,0
+TXN-100902,2025-01-10,Middle East,SMB,cancelled,225.42,214.15,1
+TXN-100903,2025-06-14,North America,Consumer,active,80.57,68.48,0
+TXN-100904,2025-03-20,Middle East,SMB,active,329.9,280.41,0
+TXN-100905,2025-02-26,North America,Enterprise,active,1257.33,1194.46,0
+TXN-100906,2025-01-17,Europe,Enterprise,active,1213.93,1153.23,1
+TXN-100907,2025-10-20,Latin America,Consumer,cancelled,52.8,47.52,1
+TXN-100908,2025-01-26,Asia-Pacific,Mid-Market,cancelled,711.94,711.94,1
+TXN-100909,2025-01-07,Europe,Consumer,active,92.91,78.97,0
+TXN-100910,2025-02-01,Asia-Pacific,Consumer,active,123.27,123.27,0
+TXN-100911,2025-05-17,Middle East,Enterprise,pending,1107.67,1107.67,0
+TXN-100912,2025-02-09,Europe,Enterprise,active,1265.75,1202.46,0
+TXN-100913,2025-04-08,Europe,Mid-Market,cancelled,637.41,605.54,1
+TXN-100914,2025-10-13,Middle East,Consumer,pending,111.55,111.55,0
+TXN-100915,2025-10-23,Asia-Pacific,Consumer,pending,78.09,66.38,0
+TXN-100916,2025-03-27,Europe,Consumer,cancelled,85.58,77.02,1
+TXN-100917,2025-12-03,Europe,Consumer,active,92.16,82.94,0
+TXN-100918,2025-06-16,Asia-Pacific,Consumer,pending,83.73,71.17,0
+TXN-100919,2025-06-15,Middle East,Mid-Market,cancelled,533.03,506.38,1
+TXN-100920,2025-07-12,Middle East,SMB,active,262.13,222.81,0
+TXN-100921,2025-07-23,North America,Enterprise,active,1522.09,1522.09,0
+TXN-100922,2025-06-04,North America,SMB,active,185.84,176.55,0
+TXN-100923,2025-01-12,Asia-Pacific,Mid-Market,active,619.95,619.95,0
+TXN-100924,2025-03-21,Europe,SMB,active,206.24,195.93,0
+TXN-100925,2025-06-03,North America,Consumer,cancelled,103.9,98.7,1
+TXN-100926,2025-02-09,Asia-Pacific,Consumer,active,49.54,42.11,0
+TXN-100927,2025-12-20,Middle East,Enterprise,cancelled,1032.32,929.09,1
+TXN-100928,2025-01-20,Middle East,Consumer,active,87.54,87.54,0
+TXN-100929,2025-06-21,Asia-Pacific,Consumer,active,111.31,111.31,0
+TXN-100930,2025-04-27,Middle East,Enterprise,pending,1180.27,1003.23,1
+TXN-100931,2025-09-26,North America,SMB,cancelled,215.3,204.53,1
+TXN-100932,2025-06-17,Middle East,Mid-Market,active,882.17,882.17,0
+TXN-100933,2025-07-21,Latin America,Enterprise,active,765.6,650.76,0
+TXN-100934,2025-07-21,Europe,Mid-Market,active,270.18,270.18,0
+TXN-100935,2025-01-26,Middle East,Consumer,active,88.8,88.8,0
+TXN-100936,2025-08-11,Europe,Mid-Market,active,524.69,498.46,0
+TXN-100937,2025-11-30,Middle East,Mid-Market,cancelled,446.82,424.48,1
+TXN-100938,2025-05-05,North America,SMB,active,294.27,264.84,0
+TXN-100939,2025-10-22,North America,Enterprise,pending,1273.14,1082.17,0
+TXN-100940,2025-06-28,Europe,SMB,active,214.75,214.75,0
+TXN-100941,2025-03-28,Asia-Pacific,Consumer,cancelled,54.39,51.67,1
+TXN-100942,2025-08-14,North America,Mid-Market,active,730.87,657.78,0
+TXN-100943,2025-02-13,North America,Enterprise,active,1395.06,1325.31,0
+TXN-100944,2025-05-28,North America,SMB,pending,243.8,243.8,0
+TXN-100945,2025-08-30,North America,SMB,active,365.41,347.14,0
+TXN-100946,2025-09-25,Asia-Pacific,Consumer,cancelled,58.6,55.67,1
+TXN-100947,2025-12-22,North America,Consumer,cancelled,49.49,49.49,1
+TXN-100948,2025-05-11,Europe,Enterprise,active,992.43,942.81,0
+TXN-100949,2025-11-13,Asia-Pacific,Enterprise,active,1186.32,1186.32,1
+TXN-100950,2025-12-05,Asia-Pacific,SMB,active,265.21,265.21,0
+TXN-100951,2025-11-29,Latin America,Mid-Market,active,563.81,563.81,0
+TXN-100952,2025-09-06,Middle East,Enterprise,active,1305.62,1240.34,0
+TXN-100953,2025-08-23,Middle East,Enterprise,active,824.54,783.31,0
+TXN-100954,2025-06-06,Asia-Pacific,Consumer,active,108.88,103.44,1
+TXN-100955,2025-12-17,Asia-Pacific,SMB,pending,244.87,220.38,0
+TXN-100956,2025-09-14,Asia-Pacific,Enterprise,pending,1535.19,1381.67,0
+TXN-100957,2025-01-16,Middle East,SMB,active,271.42,257.85,0
+TXN-100958,2025-07-21,Europe,Enterprise,pending,1337.03,1136.48,0
+TXN-100959,2025-12-14,Middle East,Mid-Market,active,685.47,651.2,0
+TXN-100960,2025-08-07,Asia-Pacific,SMB,active,277.98,264.08,0
+TXN-100961,2025-03-12,Middle East,Mid-Market,active,696.41,626.77,0
+TXN-100962,2025-09-26,Europe,Consumer,active,106.58,101.25,0
+TXN-100963,2025-10-13,Middle East,Enterprise,active,1258.96,1133.06,0
+TXN-100964,2025-03-16,North America,SMB,active,294.31,250.16,0
+TXN-100965,2025-11-23,Asia-Pacific,Mid-Market,active,586.54,586.54,0
+TXN-100966,2025-01-14,Middle East,SMB,cancelled,340.01,323.01,1
+TXN-100967,2025-11-02,Europe,Mid-Market,pending,498.54,498.54,0
+TXN-100968,2025-12-19,Latin America,Mid-Market,cancelled,870.14,739.62,1
+TXN-100969,2025-12-31,Asia-Pacific,Mid-Market,active,593.98,504.88,0
+TXN-100970,2025-03-25,Europe,Mid-Market,active,385.38,327.57,0
+TXN-100971,2025-01-08,Asia-Pacific,Consumer,active,82.56,78.43,0
+TXN-100972,2025-02-03,Europe,Consumer,cancelled,66.38,56.42,1
+TXN-100973,2025-12-19,Asia-Pacific,Consumer,active,96.81,82.29,0
+TXN-100974,2025-01-22,Middle East,Consumer,pending,66.95,60.26,0
+TXN-100975,2025-10-20,Middle East,Enterprise,cancelled,1066.14,1066.14,1
+TXN-100976,2025-08-20,Latin America,Enterprise,active,633.14,538.17,0
+TXN-100977,2025-01-21,Middle East,Consumer,cancelled,70.95,70.95,1
+TXN-100978,2025-04-08,Asia-Pacific,Consumer,active,31.52,28.37,0
+TXN-100979,2025-05-27,Latin America,Mid-Market,active,362.41,326.17,0
+TXN-100980,2025-01-28,Middle East,Mid-Market,active,714.06,606.95,1
+TXN-100981,2025-09-14,North America,Mid-Market,cancelled,717.87,681.98,1
+TXN-100982,2025-07-21,Latin America,SMB,active,276.59,276.59,0
+TXN-100983,2025-10-30,Europe,Consumer,active,60.66,54.59,0
+TXN-100984,2025-11-29,Europe,Enterprise,active,1185.69,1185.69,0
+TXN-100985,2025-11-21,Asia-Pacific,Enterprise,cancelled,1198.92,1019.08,1
+TXN-100986,2025-09-19,Middle East,Mid-Market,active,426.25,362.31,1
+TXN-100987,2025-03-29,Asia-Pacific,Mid-Market,active,825.51,784.23,0
+TXN-100988,2025-12-31,North America,Consumer,active,97.55,87.8,0
+TXN-100989,2025-08-17,Asia-Pacific,Mid-Market,active,566.86,538.52,0
+TXN-100990,2025-01-02,Middle East,SMB,active,251.68,213.93,0
+TXN-100991,2025-09-13,Middle East,Enterprise,cancelled,1262.51,1073.13,1
+TXN-100992,2025-05-02,Europe,Consumer,active,39.17,33.29,0
+TXN-100993,2025-11-04,Middle East,Enterprise,active,1125.85,1013.26,0
+TXN-100994,2025-10-13,Europe,Enterprise,active,995.4,945.63,1
+TXN-100995,2025-06-28,North America,Mid-Market,active,449.76,404.78,0
+TXN-100996,2025-02-14,North America,Enterprise,active,1115.67,1059.89,0
+TXN-100997,2025-05-26,Middle East,Mid-Market,active,869.65,782.68,0
+TXN-100998,2025-02-17,Asia-Pacific,SMB,active,290.05,246.54,0
+TXN-100999,2025-08-07,Middle East,Enterprise,active,1028.65,874.35,0
+TXN-101000,2025-12-22,Asia-Pacific,SMB,cancelled,285.79,242.92,1

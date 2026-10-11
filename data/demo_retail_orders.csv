@@ -1,0 +1,242 @@
+order_id,order_date,customer_id,region,customer_segment,sales_channel,product,units_sold,unit_price,discount_rate,revenue_inr,cost_inr,profit_inr,order_status
+ORD-01001,2025-01-17,CUST-0036,East,Enterprise,Mobile App,Keyboard,7,66.77,0.1,420.66,213.61,207.05,Completed
+ORD-01002,2025-05-20,CUST-0049,West,Consumer,Store,Laptop Stand,2,37.02,0.1,74.63,44.06,30.57,Completed
+ORD-01003,2025-04-28,CUST-0075,North,Consumer,Partner,Laptop Stand,4,37.38,0.15,127.09,58.46,68.63,Completed
+ORD-01004,2025-03-20,CUST-0040,South,Consumer,Store,Monitor Light,8,44.19,0.1,318.17,214.02,104.15,Completed
+ORD-01005,2025-03-19,CUST-0033,North,Small Business,Partner,Wireless Mouse,8,22.89,0.0,183.08,83.4,99.68,Completed
+ORD-01006,2025-06-04,CUST-0012,East,Consumer,Store,USB-C Hub,8,54.89,0.0,491.81,247.55,244.26,Completed
+ORD-01007,2025-01-16,CUST-0033,South,Small Business,Partner,USB-C Hub,3,53.06,0.1,143.27,87.82,55.45,Completed
+ORD-01008,2025-05-06,CUST-0012,North,Small Business,Web,USB-C Hub,7,54.71,0.1,386.04,245.82,140.22,Completed
+ORD-01009,2025-02-06,CUST-0017,North,Consumer,Store,Keyboard,8,60.96,0.0,487.66,266.99,220.67,Completed
+ORD-01010,2025-01-17,CUST-0086,East,Enterprise,Mobile App,Laptop Stand,8,39.56,0.05,300.66,161.85,138.81,Completed
+ORD-01011,2025-04-05,CUST-0009,North,Small Business,Mobile App,Monitor Light,1,44.46,0.15,264.53,23.32,241.21,Completed
+ORD-01012,2025-06-25,CUST-0044,Central,Consumer,Store,Keyboard,6,71.88,,410.58,279.95,130.63,Completed
+ORD-01013,2025-05-13,CUST-0076,East,Consumer,Partner,Monitor Light,8,40.23,0.1,324.42,192.31,132.11,Completed
+ORD-01014,2025-05-18,CUST-0086,South,Consumer,Partner,Wireless Mouse,7,26.42,0.05,196.78,98.58,98.2,Returned
+ORD-01015,2025-05-10,CUST-0014,East,Consumer,Web,Laptop Stand,2,42.16,0.0,94.44,45.82,48.62,Completed
+ORD-01016,2025-05-22,CUST-0015,North,Consumer,Store,Monitor Light,7,42.86,0.1,302.44,135.11,167.33,Returned
+ORD-01017,2025-04-03,CUST-0034,Central,Enterprise,Store,USB-C Hub,1,61.27,0.05,58.21,35.98,22.23,Completed
+ORD-01018,2025-01-24,CUST-0050,East,Consumer,Mobile App,Laptop Stand,4,41.03,0.1,147.69,71.68,76.01,Returned
+ORD-01019,2025-06-01,CUST-0087,West,Consumer,Web,Wireless Mouse,6,25.86,0.1,156.43,95.07,61.36,Cancelled
+ORD-01020,2025-03-23,CUST-0019,North,Small Business,Web,Keyboard,4,61.14,0.0,244.55,139.15,105.4,Completed
+ORD-01021,2025-04-01,CUST-0015,East,Consumer,Store,Wireless Mouse,6,23.58,0.0,141.5,102.88,38.62,Completed
+ORD-01022,2025-03-08,CUST-0023,East,Enterprise,Mobile App,Laptop Stand,2,37.36,0.0,74.73,36.09,38.64,Cancelled
+ORD-01023,2025-02-02,CUST-0079,Central,Small Business,Partner,Monitor Light,5,47.44,0.15,201.61,131.12,70.49,Returned
+ORD-01024,2025-06-16,CUST-0003,East,Consumer,Mobile App,Laptop Stand,6,42.26,0.1,255.58,173.91,81.67,Cancelled
+ORD-01025,2025-05-21,CUST-0035,East,Consumer,Partner,Keyboard,6,61.88,0.0,3742.8,238.9,3503.9,Completed
+ORD-01026,2025-04-26,CUST-0011,South,Enterprise,Mobile App,Keyboard,3,56.55,0.15,144.21,86.74,57.47,Completed
+ORD-01027,2025-03-14,CUST-0015,South,Small Business,Store,Keyboard,3,65.02,0.05,185.32,112.3,73.02,Completed
+ORD-01028,2025-05-29,CUST-0083,East,Enterprise,Web,Keyboard,3,65.5,0.05,209.06,110.06,99.0,Completed
+ORD-01029,2025-04-09,CUST-0001,South,Consumer,Mobile App,Wireless Mouse,4,25.26,0.2,80.82,58.57,22.25,Completed
+ORD-01030,2025-03-21,CUST-0029,North,Enterprise,Store,Wireless Mouse,5,25.43,0.0,127.16,64.99,62.17,Completed
+ORD-01031,2025-03-23,CUST-0083,West,Small Business,Partner,Wireless Mouse,3,23.48,0.0,70.44,39.01,31.43,Completed
+ORD-01032,2025-02-10,CUST-0055,Central,Consumer,Store,USB-C Hub,4,48.14,0.1,173.29,86.28,87.01,Completed
+ORD-01033,2025-01-17,CUST-0007,North,Small Business,Web,Keyboard,3,56.76,0.0,170.29,96.97,73.32,Completed
+ORD-01034,2025-04-10,CUST-0042,East,Small Business,Mobile App,Monitor Light,2,39.98,0.1,71.97,47.3,24.67,Completed
+ORD-01035,2025-06-09,CUST-0088,North,Consumer,Web,Monitor Light,6,46.87,0.0,314.98,153.01,161.97,Completed
+ORD-01036,2025-01-12,CUST-0037,West,Consumer,Web,Keyboard,7,60.59,0.0,424.15,189.57,234.58,Completed
+ORD-01037,2025-06-04,CUST-0048,South,Small Business,Store,Monitor Light,3,44.38,,149.12,83.77,65.35,Completed
+ORD-01038,2025-05-29,CUST-0048,West,Consumer,Store,Wireless Mouse,7,18.33,0.05,136.48,75.11,61.37,Completed
+ORD-01039,2025-02-19,CUST-0060,West,Consumer,Store,USB-C Hub,5,46.81,0.0,234.06,119.18,114.88,Completed
+ORD-01040,2025-04-24,CUST-0017,West,Consumer,Partner,USB-C Hub,2,56.66,0.0,113.33,61.24,52.09,Cancelled
+ORD-01041,2025-01-30,CUST-0076,North,Consumer,Store,Laptop Stand,3,35.98,0.15,91.75,49.11,42.64,Completed
+ORD-01042,2025-05-17,CUST-0089,Central,Enterprise,Store,Monitor Light,1,47.33,0.05,50.36,23.11,27.25,Completed
+ORD-01043,2025-05-07,CUST-0013,North,Small Business,Web,Monitor Light,1,40.88,0.05,43.5,21.35,22.15,Completed
+ORD-01044,2025-03-05,CUST-0074,North,Consumer,Web,Monitor Light,3,51.29,0.0,153.88,99.41,54.47,Completed
+ORD-01045,2025-01-13,CUST-0074,East,Enterprise,Store,USB-C Hub,4,51.4,0.05,195.32,105.93,89.39,Completed
+ORD-01046,2025-06-24,CUST-0067,South,Enterprise,Partner,Monitor Light,7,47.07,0.0,369.01,199.27,169.74,Returned
+ORD-01047,2025-03-22,CUST-0034,West,Consumer,Web,Keyboard,2,72.35,0.1,130.23,75.58,54.65,Completed
+ORD-01048,2025-06-10,CUST-0043,West,Small Business,Mobile App,USB-C Hub,7,58.31,0.0,457.14,235.65,221.49,Completed
+ORD-01049,2025-05-03,CUST-0076,South,Consumer,Store,USB-C Hub,2,50.72,0.15,96.58,55.81,40.77,Completed
+ORD-01050,2025-05-21,CUST-0014,Central,Enterprise,Web,Laptop Stand,2,36.2,0.2,64.86,44.96,19.9,Completed
+ORD-01051,2025-05-17,CUST-0075,South,Small Business,Mobile App,Monitor Light,6,44.8,0.0,301.07,140.47,160.6,Completed
+ORD-01052,2025-02-05,CUST-0083,East,Small Business,Partner,Keyboard,7,63.49,0.0,444.42,199.95,244.47,Completed
+ORD-01053,2025-03-07,CUST-0062,South,Consumer,Store,Monitor Light,5,45.61,0.0,228.06,105.65,122.41,Completed
+ORD-01054,2025-03-26,CUST-0031,Central,Enterprise,Web,Keyboard,1,59.07,0.1,53.16,30.88,22.28,Returned
+ORD-01055,2025-03-31,CUST-0051,North,Consumer,Partner,Keyboard,1,68.16,0.0,68.16,32.21,35.95,Completed
+ORD-01056,2025-01-08,CUST-0005,North,Consumer,Mobile App,Monitor Light,4,45.58,0.15,154.97,107.33,47.64,Completed
+ORD-01057,2025-04-09,CUST-0084,South,Consumer,Partner,USB-C Hub,4,61.57,0.15,209.33,129.88,79.45,Cancelled
+ORD-01058,2025-01-28,CUST-0031,Central,Small Business,Web,Laptop Stand,8,38.28,0.15,260.28,222.37,37.91,Completed
+ORD-01059,2025-05-14,CUST-0006,Central,Consumer,Mobile App,Laptop Stand,3,43.43,0.1,131.32,57.11,74.21,Completed
+ORD-01060,2025-05-03,CUST-0072,West,Enterprise,Mobile App,Wireless Mouse,2,24.69,0.2,44.24,28.35,15.89,Completed
+ORD-01061,2025-06-16,CUST-0060,Central,Small Business,Web,USB-C Hub,8,56.01,0.0,501.82,215.53,286.29,Completed
+ORD-01062,2025-05-15,CUST-0057,Central,,Partner,Monitor Light,2,43.33,0.05,92.21,45.54,46.67,Completed
+ORD-01063,2025-03-07,CUST-0005,East,Consumer,Web,USB-C Hub,1,48.45,0.05,46.03,27.61,18.42,Completed
+ORD-01064,2025-06-24,CUST-0068,South,Consumer,Web,Laptop Stand,4,39.4,0.2,141.2,62.6,78.6,Completed
+ORD-01065,2025-03-15,CUST-0058,West,Small Business,Mobile App,Wireless Mouse,4,25.9,0.1,93.23,59.73,33.5,Completed
+ORD-01066,2025-02-28,CUST-0072,West,Small Business,Store,Keyboard,5,61.2,0.15,260.08,212.11,47.97,Completed
+ORD-01067,2025-06-12,CUST-0075,South,Consumer,Store,Keyboard,8,54.72,0.0,490.31,231.26,259.05,Completed
+ORD-01068,2025-03-08,CUST-0020,North,Small Business,Partner,Wireless Mouse,8,21.39,0.2,136.89,98.93,37.96,Completed
+ORD-01069,2025-01-14,CUST-0019,West,Consumer,Web,Keyboard,3,54.04,0.1,145.9,102.41,43.49,Completed
+ORD-01070,2025-03-26,CUST-0084,South,Small Business,Mobile App,Monitor Light,8,39.5,0.1,284.37,173.31,111.06,Completed
+ORD-01071,2025-05-24,CUST-0048,Central,Enterprise,Web,Keyboard,6,61.53,0.2,330.8,191.74,139.06,Cancelled
+ORD-01072,2025-02-04,CUST-0040,North,Small Business,Mobile App,Keyboard,1,66.49,0.05,63.17,26.64,36.53,Completed
+ORD-01073,2025-03-25,CUST-0026,North,Small Business,Partner,Monitor Light,8,45.95,0.05,349.22,222.35,126.87,Completed
+ORD-01074,2025-01-24,CUST-0058,Central,Small Business,Store,Wireless Mouse,2,19.66,0.1,35.39,21.71,13.68,Returned
+ORD-01075,2025-05-04,CUST-0068,North,Consumer,Mobile App,Monitor Light,5,45.3,0.0,253.67,110.78,142.89,Completed
+ORD-01076,2025-03-27,CUST-0001,North,Consumer,Mobile App,Wireless Mouse,7,23.69,0.05,157.52,94.32,63.2,Completed
+ORD-01077,2025-03-01,CUST-0050,East,Consumer,Partner,Wireless Mouse,2,28.02,0.0,56.05,29.1,26.95,Completed
+ORD-01078,2025-02-10,CUST-0090,Central,Consumer,Mobile App,Monitor Light,3,40.64,0.0,121.91,63.76,58.15,Completed
+ORD-01079,2025-04-12,CUST-0026,North,Small Business,Web,USB-C Hub,4,50.37,0.15,171.27,121.39,49.88,Completed
+ORD-01080,2025-05-01,CUST-0026,South,Small Business,Mobile App,USB-C Hub,8,59.1,0.1,476.55,220.46,256.09,Completed
+ORD-01081,2025-06-19,CUST-0080,West,Enterprise,Web,Wireless Mouse,2,24.86,0.05,52.91,31.49,21.42,Completed
+ORD-01082,2025-03-20,CUST-0006,Central,Consumer,Web,USB-C Hub,6,54.34,0.05,309.76,150.69,159.07,Completed
+ORD-01083,2025-01-29,CUST-0036,East,Small Business,Web,Laptop Stand,4,38.35,0.05,145.72,78.78,66.94,Completed
+ORD-01084,2025-05-30,CUST-0042,North,Consumer,Mobile App,Monitor Light,1,47.21,0.1,47.59,32.8,14.79,Completed
+ORD-01085,2025-04-24,CUST-0072,North,Consumer,Store,USB-C Hub,6,55.23,,2386.17,211.74,2174.43,Completed
+ORD-01086,2025-05-07,CUST-0012,North,Small Business,Mobile App,Keyboard,7,57.05,0.2,357.82,226.36,131.46,Completed
+ORD-01087,2025-01-18,CUST-0040,North,Enterprise,Mobile App,USB-C Hub,5,55.65,0.05,264.35,137.51,126.84,Completed
+ORD-01088,2025-02-26,CUST-0014,West,Small Business,Partner,USB-C Hub,2,46.29,0.05,87.95,48.41,39.54,Completed
+ORD-01089,2025-05-19,CUST-0071,North,Consumer,Store,Laptop Stand,2,39.0,,82.99,44.08,38.91,Completed
+ORD-01090,2025-05-30,CUST-0057,East,Small Business,Mobile App,Laptop Stand,4,38.54,0.1,155.41,86.74,68.67,Completed
+ORD-01091,2025-03-20,CUST-0045,West,Consumer,Web,Wireless Mouse,5,22.82,0.05,108.38,63.16,45.22,Completed
+ORD-01092,2025-05-25,CUST-0036,East,Enterprise,Partner,Wireless Mouse,5,23.96,0.1,120.74,66.82,53.92,Completed
+ORD-01093,2025-06-01,CUST-0014,North,Small Business,Web,Wireless Mouse,2,22.8,0.1,45.98,24.86,21.12,Completed
+ORD-01094,2025-03-11,CUST-0083,West,Consumer,Web,Wireless Mouse,5,21.94,0.05,104.23,50.36,53.87,Completed
+ORD-01095,2025-06-11,CUST-0059,West,Consumer,Partner,Monitor Light,3,44.7,0.05,142.68,70.25,72.43,Completed
+ORD-01096,2025-02-21,CUST-0029,West,Consumer,Mobile App,Laptop Stand,6,34.64,0.05,197.47,129.71,67.76,Completed
+ORD-01097,2025-02-13,CUST-0038,North,Enterprise,Store,Wireless Mouse,7,24.62,0.0,172.34,80.0,92.34,Completed
+ORD-01098,2025-05-03,CUST-0066,North,Consumer,Mobile App,Laptop Stand,6,34.5,0.0,231.86,113.19,118.67,Completed
+ORD-01099,2025-04-25,CUST-0065,Central,Small Business,Store,Wireless Mouse,1,25.37,0.1,22.83,12.75,10.08,Completed
+ORD-01100,2025-01-26,CUST-0042,South,Small Business,Web,Monitor Light,8,41.65,0.05,316.56,189.2,127.36,Completed
+ORD-01101,2025-05-30,CUST-0028,South,Small Business,Web,Laptop Stand,1,36.28,0.0,40.63,19.33,21.3,Completed
+ORD-01102,2025-02-05,CUST-0060,East,Consumer,Web,Wireless Mouse,8,22.8,0.1,164.17,121.01,43.16,Completed
+ORD-01103,2025-05-25,CUST-0060,West,Enterprise,Web,Laptop Stand,1,42.03,0.15,40.01,25.03,14.98,Completed
+ORD-01104,2025-01-02,CUST-0054,Central,Consumer,Partner,Keyboard,5,62.61,0.0,313.06,146.57,166.49,Completed
+ORD-01105,2025-05-24,CUST-0007,South,Small Business,Web,Monitor Light,1,45.22,0.15,43.05,27.45,15.6,Returned
+ORD-01106,2025-05-22,CUST-0043,Central,Small Business,Mobile App,Wireless Mouse,1,24.96,0.2,22.37,12.62,9.75,Completed
+ORD-01107,2025-05-21,CUST-0056,North,Small Business,Store,Laptop Stand,6,31.59,0.1,191.08,98.5,92.58,Completed
+ORD-01108,2025-04-30,CUST-0086,East,Enterprise,Store,Laptop Stand,6,37.87,0.1,204.49,132.23,72.26,Completed
+ORD-01109,2025-03-26,CUST-0048,West,Consumer,Mobile App,USB-C Hub,1,60.31,0.0,60.31,31.7,28.61,Completed
+ORD-01110,2025-05-07,CUST-0031,North,Consumer,Mobile App,Monitor Light,8,46.49,0.2,333.22,231.51,101.71,Completed
+ORD-01111,2025-02-19,CUST-0051,North,Consumer,Partner,USB-C Hub,3,52.28,0.05,149.01,79.33,69.68,Completed
+ORD-01112,2025-05-21,CUST-0016,South,Consumer,Store,Keyboard,3,63.67,0.2,171.16,98.7,72.46,Returned
+ORD-01113,2025-04-11,CUST-0009,Central,Consumer,Store,Wireless Mouse,3,25.72,0.1,69.44,39.66,29.78,Cancelled
+ORD-01114,2025-03-24,CUST-0062,East,Consumer,Partner,Wireless Mouse,4,20.16,0.0,80.66,41.98,38.68,Completed
+ORD-01115,2025-04-02,CUST-0089,Central,Consumer,Store,USB-C Hub,2,45.0,0.0,90.0,57.33,32.67,Completed
+ORD-01116,2025-04-13,CUST-0077,West,Consumer,Web,Wireless Mouse,4,24.4,0.1,790.65,58.96,731.69,Completed
+ORD-01117,2025-01-07,CUST-0053,South,Consumer,Mobile App,Keyboard,2,57.51,0.1,103.52,78.18,25.34,Completed
+ORD-01118,2025-01-26,CUST-0004,West,Small Business,Web,Laptop Stand,1,41.99,0.0,41.99,30.18,11.81,Completed
+ORD-01119,2025-02-14,CUST-0089,North,Small Business,Store,USB-C Hub,3,,,129.26,74.19,55.07,Cancelled
+ORD-01120,2025-01-21,CUST-0041,North,Consumer,Partner,USB-C Hub,6,43.95,0.15,224.16,148.98,75.18,Completed
+ORD-01121,2025-03-21,CUST-0027,West,Consumer,Mobile App,Laptop Stand,7,34.15,0.1,215.11,114.17,100.94,Completed
+ORD-01122,2025-05-01,CUST-0081,West,Consumer,Mobile App,USB-C Hub,3,40.56,0.05,129.47,61.52,67.95,Completed
+ORD-01123,2025-04-28,CUST-0068,North,Small Business,Web,USB-C Hub,3,51.03,0.0,153.08,78.97,74.11,Completed
+ORD-01124,2025-03-26,CUST-0068,East,Consumer,Partner,Wireless Mouse,7,23.64,0.15,140.65,80.42,60.23,Completed
+ORD-01125,2025-06-03,CUST-0025,East,Consumer,Web,Laptop Stand,6,36.71,0.05,234.35,107.13,127.22,Cancelled
+ORD-01126,2025-04-12,CUST-0090,Central,Consumer,Web,Laptop Stand,7,41.28,0.15,245.61,158.9,86.71,Completed
+ORD-01127,2025-01-15,CUST-0041,East,Consumer,Web,Laptop Stand,8,41.64,0.05,316.49,158.19,158.3,Completed
+ORD-01128,2025-05-18,CUST-0048,South,Consumer,Web,USB-C Hub,7,51.29,0.1,361.91,222.23,139.68,Completed
+ORD-01129,2025-04-14,CUST-0068,South,Small Business,Mobile App,Laptop Stand,8,31.51,0.0,252.08,124.97,127.11,Returned
+ORD-01130,2025-04-25,CUST-0060,South,Small Business,Mobile App,Keyboard,4,64.01,0.0,256.05,193.74,62.31,Completed
+ORD-01131,2025-04-12,CUST-0016,West,Small Business,Web,Wireless Mouse,4,25.07,0.15,85.23,52.98,32.25,Completed
+ORD-01132,2025-04-10,CUST-0028,Central,Small Business,Web,Monitor Light,3,47.14,0.1,127.27,79.91,47.36,Completed
+ORD-01133,2025-01-17,CUST-0033,South,Small Business,Web,Monitor Light,2,49.61,0.1,89.3,46.57,42.73,Completed
+ORD-01134,2025-04-11,CUST-0086,North,Consumer,Mobile App,USB-C Hub,6,47.15,0.2,226.34,192.23,34.11,Returned
+ORD-01135,2025-05-24,CUST-0065,North,Small Business,Web,Keyboard,6,70.8,0.2,380.63,271.19,109.44,Completed
+ORD-01136,2025-02-24,CUST-0033,West,Consumer,Store,Laptop Stand,7,35.08,0.15,208.75,142.63,66.12,Cancelled
+ORD-01137,2025-04-19,CUST-0067,West,Consumer,Web,Wireless Mouse,2,25.44,0.0,50.88,23.69,27.19,Completed
+ORD-01138,2025-01-06,CUST-0067,North,Small Business,Web,Wireless Mouse,4,20.76,0.1,74.74,47.73,27.01,Completed
+ORD-01139,2025-03-04,CUST-0036,North,Consumer,Mobile App,Laptop Stand,2,,0.15,59.79,33.87,25.92,Completed
+ORD-01140,2025-03-20,CUST-0037,East,Consumer,Mobile App,Wireless Mouse,8,26.91,0.05,204.53,142.6,61.93,Completed
+ORD-01141,2025-06-26,CUST-0081,North,Small Business,Web,Wireless Mouse,3,23.5,0.0,78.96,43.47,35.49,Completed
+ORD-01142,2025-02-08,CUST-0051,West,Enterprise,Web,Monitor Light,2,49.09,0.15,83.45,55.64,27.81,Completed
+ORD-01143,2025-02-19,CUST-0014,South,Enterprise,Partner,Wireless Mouse,5,24.45,0.1,110.05,47.62,62.43,Completed
+ORD-01144,2025-03-15,CUST-0065,North,Consumer,Web,Keyboard,8,60.49,0.1,435.51,237.67,197.84,Completed
+ORD-01145,2025-06-28,CUST-0054,Central,Consumer,Mobile App,Monitor Light,8,51.02,0.2,365.7,248.21,117.49,Cancelled
+ORD-01146,2025-06-03,CUST-0046,North,Small Business,Mobile App,Keyboard,1,59.85,0.1,60.32,38.59,21.73,Completed
+ORD-01147,2025-01-07,CUST-0066,South,Consumer,Web,Laptop Stand,3,32.59,0.05,92.87,62.34,30.53,Completed
+ORD-01148,2025-02-12,CUST-0082,North,Small Business,Mobile App,Keyboard,2,57.08,0.05,108.45,51.21,57.24,Completed
+ORD-01149,2025-05-28,CUST-0030,North,Consumer,Store,Monitor Light,3,48.03,0.05,153.31,83.73,69.58,Completed
+ORD-01150,2025-01-11,CUST-0038,North,Consumer,Store,Keyboard,5,62.93,0.0,314.65,198.57,116.08,Completed
+ORD-01151,2025-06-04,CUST-0018,North,Consumer,Web,Wireless Mouse,3,20.99,0.15,59.95,27.96,31.99,Completed
+ORD-01152,2025-02-20,CUST-0059,North,Small Business,Web,Keyboard,1,57.47,0.15,48.85,32.15,16.7,Completed
+ORD-01153,2025-06-15,CUST-0037,North,Consumer,Web,USB-C Hub,5,49.58,0.0,277.65,143.58,134.07,Completed
+ORD-01154,2025-02-22,CUST-0031,East,Consumer,Mobile App,Laptop Stand,1,36.89,0.05,35.04,19.88,15.16,Completed
+ORD-01155,2025-03-20,CUST-0063,West,Consumer,Store,USB-C Hub,2,46.28,0.15,78.67,39.83,38.84,Completed
+ORD-01156,2025-04-30,CUST-0037,South,Consumer,Web,Laptop Stand,1,36.09,0.0,36.09,19.39,16.7,Completed
+ORD-01157,2025-01-23,CUST-0042,South,Consumer,Web,Keyboard,1,57.44,0.1,51.7,30.85,20.85,Completed
+ORD-01158,2025-04-11,CUST-0040,East,Small Business,Partner,Wireless Mouse,4,25.48,0.05,96.83,56.02,40.81,Completed
+ORD-01159,2025-04-01,CUST-0024,Central,Consumer,Web,Wireless Mouse,7,25.55,0.1,160.99,93.11,67.88,Completed
+ORD-01160,2025-05-22,CUST-0012,Central,Small Business,Mobile App,USB-C Hub,7,51.39,0.0,402.92,190.31,212.61,Completed
+ORD-01161,2025-06-29,CUST-0075,North,,Store,USB-C Hub,1,50.37,0.1,50.77,28.07,22.7,Completed
+ORD-01162,2025-04-30,CUST-0009,North,Consumer,Web,Laptop Stand,1,38.43,0.05,36.5,22.71,13.79,Completed
+ORD-01163,2025-03-15,CUST-0030,North,Consumer,Web,Keyboard,3,57.02,0.1,153.94,92.14,61.8,Returned
+ORD-01164,2025-03-15,CUST-0061,North,Small Business,Web,Keyboard,6,55.4,0.0,332.42,176.62,155.8,Completed
+ORD-01165,2025-03-17,CUST-0012,East,Consumer,Partner,Monitor Light,6,42.54,0.05,242.48,144.58,97.9,Completed
+ORD-01166,2025-05-27,CUST-0059,South,Consumer,Web,Monitor Light,7,43.66,0.1,308.09,130.06,178.03,Completed
+ORD-01167,2025-02-27,CUST-0066,North,Enterprise,Web,USB-C Hub,3,47.16,0.0,141.48,83.95,57.53,Completed
+ORD-01168,2025-01-31,CUST-0060,South,Enterprise,Web,USB-C Hub,2,52.67,0.0,105.35,58.99,46.36,Completed
+ORD-01169,2025-03-02,CUST-0028,East,Small Business,Web,USB-C Hub,1,55.04,0.0,55.04,30.97,24.07,Completed
+ORD-01170,2025-01-05,CUST-0002,North,Consumer,Store,Laptop Stand,2,33.18,0.05,63.03,41.62,21.41,Completed
+ORD-01171,2025-01-20,CUST-0080,Central,Small Business,Web,Laptop Stand,1,38.08,0.0,38.08,16.12,21.96,Completed
+ORD-01172,2025-01-17,CUST-0030,North,Small Business,Mobile App,Wireless Mouse,7,23.58,0.2,132.04,69.62,62.42,Returned
+ORD-01173,2025-05-19,CUST-0073,Central,Consumer,Mobile App,USB-C Hub,3,53.42,0.05,170.52,92.82,77.7,Completed
+ORD-01174,2025-05-11,CUST-0018,North,Small Business,Store,Laptop Stand,7,37.96,0.15,2276.77,148.67,2128.1,Completed
+ORD-01175,2025-05-06,CUST-0015,Central,Consumer,Web,Laptop Stand,5,33.58,0.2,150.44,96.03,54.41,Completed
+ORD-01176,2025-03-25,CUST-0071,Central,Consumer,Partner,Keyboard,5,54.84,0.0,274.2,144.68,129.52,Cancelled
+ORD-01177,2025-05-10,CUST-0085,Central,Consumer,Mobile App,Wireless Mouse,4,24.06,0.1,96.99,58.36,38.63,Completed
+ORD-01178,2025-01-30,CUST-0078,West,Consumer,Web,USB-C Hub,7,56.28,0.15,334.86,246.34,88.52,Completed
+ORD-01179,2025-06-12,CUST-0068,West,Consumer,Store,USB-C Hub,1,42.79,0.1,43.13,25.41,17.72,Completed
+ORD-01180,2025-04-01,CUST-0023,West,Small Business,Partner,Monitor Light,1,47.27,0.05,44.91,25.61,19.3,Completed
+ORD-01181,2025-06-18,CUST-0083,West,Enterprise,Web,Monitor Light,4,50.38,0.05,214.41,83.12,131.29,Completed
+ORD-01182,2025-01-28,CUST-0061,North,Consumer,Partner,Wireless Mouse,4,23.71,0.0,94.82,58.21,36.61,Completed
+ORD-01183,2025-03-31,CUST-0016,East,Small Business,Mobile App,Keyboard,5,63.68,0.1,286.58,205.55,81.03,Completed
+ORD-01184,2025-05-06,CUST-0012,East,Enterprise,Mobile App,Wireless Mouse,6,22.65,,121.77,82.24,39.53,Returned
+ORD-01185,2025-03-31,CUST-0079,Central,Consumer,Partner,Keyboard,5,60.42,0.2,241.67,150.57,91.1,Completed
+ORD-01186,2025-03-22,CUST-0025,South,Consumer,Mobile App,USB-C Hub,3,45.26,0.0,135.77,82.44,53.33,Completed
+ORD-01187,2025-01-30,CUST-0069,South,Consumer,Store,Laptop Stand,3,30.87,0.1,83.36,57.45,25.91,Completed
+ORD-01188,2025-03-10,CUST-0013,West,Consumer,Web,Monitor Light,7,49.47,0.05,328.97,231.71,97.26,Completed
+ORD-01189,2025-02-12,CUST-0026,South,Small Business,Store,Laptop Stand,2,35.01,0.2,56.01,34.91,21.1,Completed
+ORD-01190,2025-02-24,CUST-0026,North,Consumer,Mobile App,Monitor Light,5,44.32,0.0,221.62,120.59,101.03,Completed
+ORD-01191,2025-05-04,CUST-0026,East,Consumer,Web,Laptop Stand,5,33.79,0.2,151.36,103.43,47.93,Completed
+ORD-01192,2025-04-24,CUST-0061,South,Consumer,Mobile App,Wireless Mouse,7,21.29,0.15,126.69,84.07,42.62,Completed
+ORD-01193,2025-04-20,CUST-0083,North,Consumer,Web,Monitor Light,6,45.36,0.0,272.16,131.12,141.04,Completed
+ORD-01194,2025-03-07,CUST-0082,South,Enterprise,Web,Keyboard,4,57.44,0.0,229.76,135.33,94.43,Completed
+ORD-01195,2025-06-22,CUST-0067,South,Consumer,Web,USB-C Hub,3,53.57,0.15,153.0,96.51,56.49,Completed
+ORD-01196,2025-01-16,CUST-0019,South,,Mobile App,Laptop Stand,3,39.38,0.0,118.13,66.88,51.25,Completed
+ORD-01197,2025-03-03,CUST-0087,South,Consumer,Web,Wireless Mouse,4,24.62,0.1,88.62,56.65,31.97,Completed
+ORD-01198,2025-01-22,CUST-0049,West,Consumer,Web,Keyboard,2,62.16,0.2,99.46,67.37,32.09,Completed
+ORD-01199,2025-03-03,CUST-0050,South,Small Business,Store,Monitor Light,6,51.81,0.1,279.75,206.23,73.52,Completed
+ORD-01200,2025-06-23,CUST-0064,Central,Consumer,Store,Laptop Stand,2,34.75,0.05,73.95,34.54,39.41,Completed
+ORD-01201,2025-03-07,CUST-0070,Central,Consumer,Store,Wireless Mouse,6,23.89,0.05,136.2,74.39,61.81,Cancelled
+ORD-01202,2025-06-13,CUST-0086,East,Consumer,Web,Wireless Mouse,7,26.17,0.0,205.21,102.75,102.46,Returned
+ORD-01203,2025-03-31,CUST-0053,South,Small Business,Partner,Laptop Stand,8,41.84,0.2,267.8,208.06,59.74,Completed
+ORD-01204,2025-05-06,CUST-0055,East,Small Business,Mobile App,Keyboard,1,54.06,0.05,57.52,24.61,32.91,Completed
+ORD-01205,2025-03-24,CUST-0068,Central,Small Business,Web,Monitor Light,7,44.85,0.0,313.95,147.02,166.93,Completed
+ORD-01206,2025-02-17,CUST-0023,West,Small Business,Web,Laptop Stand,1,42.13,0.0,42.13,17.58,24.55,Completed
+ORD-01207,2025-05-18,CUST-0028,West,Small Business,Store,Monitor Light,3,47.87,0.2,128.68,80.75,47.93,Completed
+ORD-01208,2025-06-24,CUST-0057,East,Consumer,Web,USB-C Hub,2,52.81,0.0,118.29,50.88,67.41,Completed
+ORD-01209,2025-02-17,CUST-0006,West,Consumer,Mobile App,Laptop Stand,2,37.34,0.15,63.48,39.81,23.67,Returned
+ORD-01210,2025-05-21,CUST-0029,South,Consumer,Partner,USB-C Hub,2,50.4,0.1,101.62,61.12,40.5,Completed
+ORD-01211,2025-02-17,CUST-0065,West,Consumer,Web,Laptop Stand,1,38.88,0.15,33.04,20.02,13.02,Completed
+ORD-01212,2025-05-10,CUST-0088,North,Small Business,Web,Wireless Mouse,7,23.52,0.2,147.49,94.85,52.64,Completed
+ORD-01213,2025-05-23,CUST-0047,West,Consumer,Partner,Keyboard,1,60.79,0.15,57.87,32.77,25.1,Completed
+ORD-01214,2025-03-22,CUST-0036,Central,Small Business,Mobile App,Monitor Light,4,46.29,0.2,148.13,112.4,35.73,Returned
+ORD-01215,2025-05-13,CUST-0040,North,Enterprise,Web,Laptop Stand,6,35.94,0.0,241.51,127.93,113.58,Completed
+ORD-01216,2025-02-19,CUST-0062,East,Consumer,Partner,Keyboard,8,63.6,0.15,432.46,260.27,172.19,Cancelled
+ORD-01217,2025-01-15,CUST-0050,North,Enterprise,Partner,USB-C Hub,7,64.12,0.1,403.98,246.06,157.92,Completed
+ORD-01218,2025-01-18,CUST-0003,West,Small Business,Mobile App,Keyboard,2,52.33,0.1,94.19,66.25,27.94,Completed
+ORD-01219,2025-03-22,CUST-0049,North,Enterprise,Store,Monitor Light,8,47.19,0.15,320.91,221.82,99.09,Completed
+ORD-01220,2025-06-12,CUST-0037,Central,Consumer,Web,Wireless Mouse,6,22.54,0.2,121.17,62.51,58.66,Completed
+ORD-01221,2025-01-23,CUST-0064,North,Consumer,Web,USB-C Hub,2,54.4,0.1,97.92,65.92,32.0,Completed
+ORD-01222,2025-03-24,CUST-0079,Central,Consumer,Mobile App,USB-C Hub,4,52.19,0.1,187.9,101.06,86.84,Completed
+ORD-01223,2025-05-07,CUST-0087,West,Consumer,Web,Monitor Light,8,48.8,0.05,415.42,257.24,158.18,Completed
+ORD-01224,2025-02-06,CUST-0055,East,Consumer,Store,Wireless Mouse,4,26.26,0.05,99.78,66.34,33.44,Completed
+ORD-01225,2025-05-10,CUST-0033,West,Enterprise,Store,Wireless Mouse,2,24.37,0.05,51.86,28.28,23.58,Completed
+ORD-01226,2025-02-25,CUST-0040,West,Small Business,Web,Wireless Mouse,8,26.17,0.05,198.92,119.56,79.36,Completed
+ORD-01227,2025-05-26,CUST-0016,Central,Consumer,Mobile App,Wireless Mouse,8,19.5,0.0,174.71,85.07,89.64,Completed
+ORD-01228,2025-04-15,CUST-0085,South,Consumer,Web,Laptop Stand,8,42.83,0.0,342.68,208.18,134.5,Completed
+ORD-01229,2025-04-09,CUST-0077,East,Consumer,Partner,Laptop Stand,8,39.14,0.15,266.15,167.22,98.93,Completed
+ORD-01230,2025-02-01,CUST-0077,North,,Web,Keyboard,7,66.26,0.05,440.63,267.39,173.24,Completed
+ORD-01231,2025-03-25,CUST-0030,East,Enterprise,Mobile App,Laptop Stand,4,34.29,0.2,109.73,85.19,24.54,Completed
+ORD-01232,2025-06-04,CUST-0029,North,Consumer,Mobile App,Keyboard,2,,0.1,114.8,59.3,55.5,Completed
+ORD-01233,2025-01-04,CUST-0078,East,Consumer,Mobile App,Laptop Stand,5,38.44,0.0,192.22,99.35,92.87,Returned
+ORD-01234,2025-05-17,CUST-0050,East,Small Business,Store,Monitor Light,2,45.94,0.0,102.89,43.77,59.12,Completed
+ORD-01235,2025-03-30,CUST-0064,South,Consumer,Store,Wireless Mouse,4,24.54,0.0,98.17,47.66,50.51,Returned
+ORD-01236,2025-05-10,CUST-0045,East,Consumer,Mobile App,USB-C Hub,6,56.51,0.2,303.81,146.48,157.33,Completed
+ORD-01237,2025-04-30,CUST-0040,West,Small Business,Store,Wireless Mouse,8,20.61,0.0,164.89,100.76,64.13,Completed
+ORD-01238,2025-03-19,CUST-0057,West,Small Business,Partner,USB-C Hub,3,56.05,0.1,151.34,115.46,35.88,Completed
+ORD-01239,2025-02-25,CUST-0074,East,Enterprise,Mobile App,USB-C Hub,3,52.03,0.2,124.88,102.99,21.89,Completed
+ORD-01240,2025-04-23,CUST-0031,East,Small Business,Mobile App,USB-C Hub,6,51.15,0.2,245.53,136.94,108.59,Completed
+ORD-01008,2025-05-06,CUST-0012,North,Small Business,Web,USB-C Hub,7,54.71,0.1,386.04,245.82,140.22,Completed

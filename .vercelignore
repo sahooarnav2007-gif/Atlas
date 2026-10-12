@@ -1,0 +1,17 @@
+pyproject.toml
+.venv/
+__pycache__/
+.pytest_cache/
+*.db
+*.sqlite
+tests/
+examples/
+docs/
+frontend/
+backend/
+atlas/
+Dockerfile
+docker-compose.yml
+reference_ui.jpg
+data/uploads/
+data/samples/

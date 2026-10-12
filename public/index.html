@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATLAS — Data Agent & Dashboard Stage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg-deep: #070b14;
+      --bg-panel: #0b101b;
+      --bg-card: #0e1525;
+      --bg-bubble-agent: #151e2e;
+      --bg-bubble-user: #0b2e42;
+      --border-subtle: #1c273b;
+      --border-user: #0e5270;
+      --cyan-primary: #00d2ff;
+      --cyan-bar: #0088ff;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --green-report: #10b981;
+      --scrollbar-thumb: #24324a;
+      --scrollbar-track: #0b101b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    /* Modern Scrollbar Styling with WebKit Fallback */
+    .scroller {
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+
+    @supports not (scrollbar-color: auto) {
+      .scroller::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .scroller::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb);
+        border-radius: 4px;
+      }
+      .scroller::-webkit-scrollbar-track {
+        background: var(--scrollbar-track);
+      }
+    }
+
+    /* 1. Leftmost Narrow Icon Rail */
+    .icon-rail {
+      width: 56px;
+      background-color: #060911;
+      border-right: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 14px;
+      gap: 18px;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    .rail-logo {
+      color: var(--cyan-primary);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .rail-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .rail-btn:hover {
+      color: var(--text-main);
+      background-color: #131c2e;
+    }
+
+    .rail-btn.active {
+      background-color: var(--cyan-primary);
+      color: #041019;
+      box-shadow: 0 0 14px rgba(0, 210, 255, 0.35);
+    }
+
+    /* 2. Left Column: Data Agent Chat Panel */
+    .agent-panel {
+      width: 390px;
+      background-color: var(--bg-panel);
+      border-right: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      flex-shrink: 0;
+    }
+
+    .panel-header {
+      height: 54px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+    }
+
+    .header-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Action Bar for Demo & File Upload */
+    .action-bar {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: #090e18;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .action-buttons-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-demo {
+      flex: 1.2;
+      background: linear-gradient(135deg, #00d2ff 0%, #0088ff 100%);
+      color: #03111c;
+      font-weight: 700;
+      font-size: 12px;
+      border: none;
+      border-radius: 7px;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: opacity 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-demo:hover {
+      opacity: 0.92;
+    }
+
+    .btn-upload {
+      flex: 1;
+      background-color: #151e2e;
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 12px;
+      border: 1px solid #26354f;
+      border-radius: 7px;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: border-color 0.15s ease;
+    }
+
+    .btn-upload:hover {
+      border-color: var(--cyan-primary);
+      color: var(--cyan-primary);
+    }
+
+    .dataset-pill {
+      font-size: 11px;
+      color: #38bdf8;
+      background: rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 5px;
+      padding: 4px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Chat Stream */
+    .chat-stream {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bubble-agent {
+      background-color: var(--bg-bubble-agent);
+      border: 1px solid #222f46;
+      border-radius: 9px;
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #dbe4f0;
+      max-width: 92%;
+      align-self: flex-start;
+    }
+
+    .bubble-user {
+      background-color: var(--bg-bubble-user);
+      border: 1px solid var(--border-user);
+      border-radius: 9px;
+      padding: 11px 14px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #38bdf8;
+      max-width: 88%;
+      align-self: flex-end;
+    }
+
+    .quick-chips {
+      padding: 6px 14px;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      border-top: 1px solid #131c2b;
+    }
+
+    .chip {
+      background-color: #121a29;
+      border: 1px solid #1f2d44;
+      color: #94a3b8;
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 14px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .chip:hover {
+      border-color: var(--cyan-primary);
+      color: var(--cyan-primary);
+    }
+
+    /* Chat Input Area */
+    .chat-input-bar {
+      padding: 12px 14px;
+      border-top: 1px solid var(--border-subtle);
+      background-color: #090d16;
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      background-color: #131b2b;
+      border: 1px solid #24334d;
+      border-radius: 8px;
+      padding: 5px 6px 5px 12px;
+    }
+
+    .input-wrapper:focus-within {
+      border-color: var(--cyan-primary);
+    }
+
+    .input-wrapper input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-main);
+      font-size: 13px;
+      font-family: inherit;
+    }
+
+    .input-wrapper input::placeholder {
+      color: #64748b;
+    }
+
+    .send-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      border: none;
+      background-color: var(--cyan-primary);
+      color: #04121c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .send-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* 3. Right Column: Dashboard Stage */
+    .stage-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: var(--bg-deep);
+      overflow: hidden;
+    }
+
+    .stage-header {
+      height: 54px;
+      padding: 0 22px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #090e18;
+    }
+
+    .stage-tabs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stage-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: #94a3b8;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .stage-tab.active {
+      background-color: #131e32;
+      border-color: #253959;
+      color: var(--cyan-primary);
+    }
+
+    .btn-full-report {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #10b981;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.4px;
+    }
+
+    .btn-full-report:hover {
+      background: rgba(16, 185, 129, 0.18);
+    }
+
+    /* Dashboard 2x2 Grid */
+    .stage-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px 22px;
+    }
+
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 1100px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chart-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 16px 18px 12px 18px;
+      display: flex;
+      flex-direction: column;
+      min-height: 335px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 5px;
+    }
+
+    .pts-badge {
+      display: inline-block;
+      background-color: rgba(0, 210, 255, 0.12);
+      color: var(--cyan-primary);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .card-dl-btn {
+      background: transparent;
+      border: none;
+      color: #64748b;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .card-dl-btn:hover {
+      color: var(--text-main);
+    }
+
+    .plot-box {
+      flex: 1;
+      width: 100%;
+      min-height: 255px;
+    }
+
+    /* Data Table & Trace Views */
+    .view-section {
+      display: none;
+    }
+
+    .view-section.active {
+      display: block;
+    }
+
+    .data-table-wrap {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: auto;
+      max-height: calc(100vh - 120px);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    th {
+      background-color: #131d31;
+      color: #38bdf8;
+      text-align: left;
+      padding: 10px 12px;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #151f33;
+      color: #cbd5e1;
+    }
+
+    tr:hover td {
+      background-color: #121b2d;
+    }
+
+    .trace-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+
+    .memory-form {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+      align-items: end;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+
+    .form-group input {
+      width: 100%;
+      background: #131b2b;
+      border: 1px solid #26354f;
+      color: #fff;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: 12.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Leftmost Icon Rail -->
+  <aside class="icon-rail">
+    <div class="rail-logo" title="ATLAS Agentic Tabular Intelligence">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+    </div>
+    <button class="rail-btn active" id="rail-stage" onclick="switchView('stage')" title="Dashboard Stage">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+      </svg>
+    </button>
+    <button class="rail-btn" id="rail-trace" onclick="switchView('trace')" title="Execution Trace & Provenance">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+      </svg>
+    </button>
+    <button class="rail-btn" id="rail-data" onclick="switchView('data')" title="Dataset Explorer & Upload">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="17 8 12 3 7 8"></polyline>
+        <line x1="12" y1="3" x2="12" y2="15"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- 2. Left Column: Data Agent Chat -->
+  <section class="agent-panel">
+    <div class="panel-header">
+      <div class="header-title">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Data Agent</span>
+      </div>
+      <span style="font-size:11px; color:#10b981; font-weight:600;">● ONLINE</span>
+    </div>
+
+    <!-- Demo Option & Upload File Option -->
+    <div class="action-bar">
+      <div class="action-buttons-row">
+        <button class="btn-demo" onclick="loadDemoDataset()">
+          <span>✨ Demo Dataset (Retail CSV)</span>
+        </button>
+        <label class="btn-upload" for="csv-file-input">
+          <span>📁 Upload CSV</span>
+        </label>
+        <input type="file" id="csv-file-input" accept=".csv,.tsv" style="display:none" onchange="handleFileUpload(event)" />
+      </div>
+      <div class="dataset-pill" id="dataset-status-pill">
+        <span id="dataset-name-label">📄 demo_retail_orders.csv</span>
+        <span id="dataset-rows-label">241 rows · 14 cols</span>
+      </div>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-stream scroller" id="chat-stream">
+      <div class="bubble-agent">
+        Hello! I am your Data Agent. Upload a CSV or click <b>"✨ Demo Dataset (Retail CSV)"</b> above, then ask me questions like "Show sales by region" or "Top 5 products".
+      </div>
+    </div>
+
+    <!-- Quick Question Chips -->
+    <div class="quick-chips scroller">
+      <span class="chip" onclick="askPreset('Which region has the highest Revenue?')">Revenue by Region</span>
+      <span class="chip" onclick="askPreset('Remember that cancelled orders are excluded from active orders')">🧠 Remember: Exclude Cancelled</span>
+      <span class="chip" onclick="askPreset('Show top products by Profit')">Top Products by Profit</span>
+      <span class="chip" onclick="askPreset('Show count of orders in each Customer Segment')">Orders by Segment</span>
+      <span class="chip" onclick="askPreset('Find anomalous orders in revenue_inr')">Detect Anomalies</span>
+    </div>
+
+    <!-- Bottom Input -->
+    <form class="chat-input-bar" onsubmit="handleChatSubmit(event)">
+      <div class="input-wrapper">
+        <input type="text" id="chat-input" placeholder="Ask 'Show Profit vs Sales'..." autocomplete="off" />
+        <button type="submit" class="send-btn" title="Send">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- 3. Right Column: Dashboard Stage -->
+  <main class="stage-panel">
+    <header class="stage-header">
+      <div class="stage-tabs">
+        <div class="header-title" style="margin-right: 14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.2">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+          <span style="font-weight:700; font-size:15.5px;">Dashboard Stage</span>
+        </div>
+        <button class="stage-tab active" id="tab-stage" onclick="switchView('stage')">📊 Visual Stage</button>
+        <button class="stage-tab" id="tab-data" onclick="switchView('data')">📋 Data & Schema</button>
+        <button class="stage-tab" id="tab-trace" onclick="switchView('trace')">⏱️ Execution Trace</button>
+        <button class="stage-tab" id="tab-memory" onclick="switchView('memory')">🧠 Domain Memory</button>
+      </div>
+      <button class="btn-full-report" onclick="downloadFullReport()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>FULL REPORT</span>
+      </button>
+    </header>
+
+    <div class="stage-content scroller">
+      <!-- VIEW 1: 2x2 VISUAL STAGE -->
+      <div class="view-section active" id="view-stage">
+        <div class="charts-grid">
+          <!-- Card 1 -->
+          <div class="chart-card">
+            <div class="card-top">
+              <div>
+                <div class="card-title" id="title-c1">Revenue by Region (INR)</div>
+                <span class="pts-badge" id="badge-c1">5 pts</span>
+              </div>
+              <button class="card-dl-btn" onclick="downloadChart('plot-c1')" title="Download PNG">⬇</button>
+            </div>
+            <div class="plot-box" id="plot-c1"></div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="chart-card">
+            <div class="card-top">
+              <div>
+                <div class="card-title" id="title-c2">Profit by Product (INR)</div>
+                <span class="pts-badge" id="badge-c2">5 pts</span>
+              </div>
+              <button class="card-dl-btn" onclick="downloadChart('plot-c2')" title="Download PNG">⬇</button>
+            </div>
+            <div class="plot-box" id="plot-c2"></div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="chart-card">
+            <div class="card-top">
+              <div>
+                <div class="card-title" id="title-c3">Count of Orders by Customer Segment</div>
+                <span class="pts-badge" id="badge-c3">3 pts</span>
+              </div>
+              <button class="card-dl-btn" onclick="downloadChart('plot-c3')" title="Download PNG">⬇</button>
+            </div>
+            <div class="plot-box" id="plot-c3"></div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="chart-card">
+            <div class="card-top">
+              <div>
+                <div class="card-title" id="title-c4">Top 10 Orders by Revenue (INR)</div>
+                <span class="pts-badge" id="badge-c4">10 pts (Top 10)</span>
+              </div>
+              <button class="card-dl-btn" onclick="downloadChart('plot-c4')" title="Download PNG">⬇</button>
+            </div>
+            <div class="plot-box" id="plot-c4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: DATA & SCHEMA TABLE -->
+      <div class="view-section" id="view-data">
+        <div class="data-table-wrap scroller" id="data-table-container"></div>
+      </div>
+
+      <!-- VIEW 3: EXECUTION TRACE -->
+      <div class="view-section" id="view-trace">
+        <div id="trace-container"></div>
+      </div>
+
+      <!-- VIEW 4: DOMAIN MEMORY -->
+      <div class="view-section" id="view-memory">
+        <div class="trace-card" style="border-color:#0e5270; background:#0b192c; margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div>
+              <div style="color:#00d2ff; font-weight:700; font-size:14px;">🧠 Cross-Session Persistent Domain Memory</div>
+              <div style="color:#94a3b8; font-size:12px; margin-top:3px;">
+                Memories persist across browser reloads &amp; sessions (<code>localStorage</code> + <code>/api/memories</code>) and <b>directly alter analytical calculations</b>.
+              </div>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn-demo" onclick="runCrossSessionProof()" style="padding:7px 12px;">
+                ⚡ Run Session A → Session B Proof
+              </button>
+              <button class="btn-upload" onclick="simulateNewSession()" style="padding:7px 12px;">
+                🔄 Simulate New Session
+              </button>
+            </div>
+          </div>
+          <div id="memory-proof-banner" style="display:none; margin-top:12px; padding:10px 12px; background:#07101e; border:1px solid #10b981; border-radius:6px; font-size:12px; color:#d1fae5;"></div>
+        </div>
+
+        <div class="memory-form">
+          <div class="form-group">
+            <label>Metric / Filter Key</label>
+            <input type="text" id="mem-key" value="active_customer_orders" />
+          </div>
+          <div class="form-group">
+            <label>Scoped SQL Filter Rule (applies to calculations)</label>
+            <input type="text" id="mem-rule" value="order_status != 'Cancelled'" />
+          </div>
+          <button class="btn-demo" onclick="saveMemoryRule()">Save &amp; Apply Rule</button>
+        </div>
+        <div id="memory-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const MEMORY_STORAGE_KEY = "atlas_persistent_memories_v1";
+    const SESSION_COUNTER_KEY = "atlas_session_counter_v1";
+
+    let currentRows = [];
+    let currentFilename = "demo_retail_orders.csv";
+    let executionTraces = [];
+    let currentSessionNumber = 1;
+    let domainMemories = [];
+
+    function initPersistentMemory() {
+      // Increment and persist session counter across reloads
+      const prevSession = parseInt(localStorage.getItem(SESSION_COUNTER_KEY) || "0", 10);
+      currentSessionNumber = prevSession + 1;
+      localStorage.setItem(SESSION_COUNTER_KEY, String(currentSessionNumber));
+
+      const rawSaved = localStorage.getItem(MEMORY_STORAGE_KEY);
+      if (rawSaved) {
+        try {
+          domainMemories = JSON.parse(rawSaved);
+        } catch (e) {
+          domainMemories = [];
+        }
+      } else {
+        // Default initial state: 1 active rule ready or empty
+        domainMemories = [
+          {
+            memory_id: "mem_init_01",
+            key: "active_orders_definition",
+            rule: "order_status != 'Cancelled'",
+            definition: "Cancelled orders are excluded from active customer revenue calculations",
+            scope_column: "order_status",
+            version: 1,
+            status: "active",
+            saved_in_session: 1,
+            updated_at: new Date().toISOString()
+          }
+        ];
+        persistMemories();
+      }
+    }
+
+    function persistMemories() {
+      localStorage.setItem(MEMORY_STORAGE_KEY, JSON.stringify(domainMemories));
+      fetch("/api/memories", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "metric_definition",
+          key: domainMemories[0]?.key || "custom_rule",
+          value: { rule: domainMemories[0]?.rule || "", definition: domainMemories[0]?.definition || "" },
+          dataset_family: "retail_orders",
+          columns: [domainMemories[0]?.scope_column || "order_status"]
+        })
+      }).catch(() => {});
+    }
+
+    // Deterministic SQL WHERE Rule Evaluator for cross-session memory filtering
+    function evaluateSingleRule(row, ruleStr) {
+      if (!ruleStr || !ruleStr.trim()) return true;
+      const m = ruleStr.trim().match(/^([a-zA-Z0-9_]+)\s*(!=|==|=|>=|<=|>|<)\s*(.+)$/);
+      if (!m) return true;
+      const col = m[1];
+      const op = m[2];
+      let rhs = m[3].trim().replace(/^['"]|['"]$/g, "");
+      if (!(col in row)) return true; // Ignore rule if column is not in this dataset schema
+
+      const cellVal = row[col];
+      const numCell = Number(cellVal);
+      const numRhs = Number(rhs);
+      const isNumeric = !isNaN(numCell) && !isNaN(numRhs) && rhs !== "";
+
+      const a = isNumeric ? numCell : String(cellVal ?? "").toLowerCase();
+      const b = isNumeric ? numRhs : String(rhs).toLowerCase();
+
+      if (op === "!=") return a !== b;
+      if (op === "=" || op === "==") return a === b;
+      if (op === ">") return a > b;
+      if (op === ">=") return a >= b;
+      if (op === "<") return a < b;
+      if (op === "<=") return a <= b;
+      return true;
+    }
+
+    function getActiveMemoriesForDataset(rows) {
+      if (!rows || rows.length === 0) return [];
+      const cols = Object.keys(rows[0]);
+      return domainMemories.filter(m => {
+        if (m.status !== "active") return false;
+        const match = (m.rule || "").trim().match(/^([a-zA-Z0-9_]+)/);
+        const refCol = match ? match[1] : null;
+        return !refCol || cols.includes(refCol);
+      });
+    }
+
+    function getFilteredRows(rows) {
+      const activeMems = getActiveMemoriesForDataset(rows);
+      if (activeMems.length === 0) return { rows: rows || [], appliedMemories: [] };
+      const filtered = (rows || []).filter(r => activeMems.every(m => evaluateSingleRule(r, m.rule)));
+      return { rows: filtered, appliedMemories: activeMems };
+    }
+
+    const PLOT_LAYOUT_BASE = {
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
+      margin: { l: 46, r: 16, t: 12, b: 56 },
+      font: { family: "Inter, sans-serif", color: "#94a3b8", size: 11 },
+      xaxis: {
+        gridcolor: "rgba(255,255,255,0.03)",
+        zerolinecolor: "rgba(255,255,255,0.08)",
+        tickfont: { color: "#94a3b8", size: 11 }
+      },
+      yaxis: {
+        gridcolor: "rgba(255,255,255,0.06)",
+        zerolinecolor: "rgba(255,255,255,0.08)",
+        tickfont: { color: "#94a3b8", size: 11 }
+      },
+      showlegend: true,
+      legend: { orientation: "h", y: -0.22, x: 0.35, font: { color: "#94a3b8", size: 11 } }
+    };
+
+    function addBubble(role, htmlText) {
+      const stream = document.getElementById("chat-stream");
+      const div = document.createElement("div");
+      div.className = role === "user" ? "bubble-user" : "bubble-agent";
+      div.innerHTML = htmlText;
+      stream.appendChild(div);
+      stream.scrollTop = stream.scrollHeight;
+    }
+
+    function recordTrace(toolName, params, rowsCount, durationMs, appliedMems = []) {
+      const opId = "op_" + Math.random().toString(16).substring(2, 8);
+      executionTraces.unshift({
+        operation_id: opId,
+        tool_name: toolName,
+        status: "success",
+        session_id: `session_${currentSessionNumber}`,
+        dataset: currentFilename,
+        validated_parameters: params,
+        memories_applied: appliedMems.map(m => ({ key: m.key, rule: m.rule, version: m.version })),
+        rows_processed: rowsCount,
+        duration_ms: durationMs,
+        timestamp: new Date().toISOString()
+      });
+      renderTraces();
+      return opId;
+    }
+
+    async function loadDemoDataset(silent = false) {
+      const t0 = performance.now();
+      try {
+        const res = await fetch("/demo_retail_orders.csv");
+        const csvText = await res.text();
+        const parsed = Papa.parse(csvText, { header: true, dynamicTyping: true, skipEmptyLines: true });
+        currentRows = parsed.data;
+        currentFilename = "demo_retail_orders.csv";
+        updateDatasetBanner();
+        buildDefaultDashboard();
+        renderDataTable();
+        const { rows: effRows, appliedMemories } = getFilteredRows(currentRows);
+        const dur = Math.max(1, Math.round(performance.now() - t0));
+        recordTrace("profile_dataset", { dataset: "demo_retail_orders.csv", total_rows: currentRows.length, effective_rows_after_memory: effRows.length }, effRows.length, dur, appliedMemories);
+
+        if (!silent) {
+          const memNote = appliedMemories.length > 0
+            ? `<br><span style="color:#38bdf8; font-size:12px;">🧠 Active Memory Applied (Session #${currentSessionNumber}): <code>${appliedMemories.map(m => m.rule).join(" AND ")}</code> (${effRows.length}/${currentRows.length} active rows)</span>`
+            : "";
+          addBubble("agent", `Loaded <b>${currentRows.length} rows</b> from <code>demo_retail_orders.csv</code>. I've prepared your dashboard.${memNote}`);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const t0 = performance.now();
+      Papa.parse(file, {
+        header: true,
+        dynamicTyping: true,
+        skipEmptyLines: true,
+        complete: function(results) {
+          currentRows = results.data;
+          currentFilename = file.name;
+          updateDatasetBanner();
+          buildDefaultDashboard();
+          renderDataTable();
+          const { rows: effRows, appliedMemories } = getFilteredRows(currentRows);
+          const dur = Math.max(1, Math.round(performance.now() - t0));
+          recordTrace("profile_dataset", { filename: file.name }, effRows.length, dur, appliedMemories);
+          addBubble("agent", `Loaded <b>${currentRows.length} rows</b> from <code>${file.name}</code>. I've updated all 4 Dashboard Stage charts automatically!`);
+        }
+      });
+    }
+
+    function updateDatasetBanner() {
+      const colsCount = currentRows.length > 0 ? Object.keys(currentRows[0]).length : 0;
+      const { rows: effRows, appliedMemories } = getFilteredRows(currentRows);
+      document.getElementById("dataset-name-label").textContent = `📄 ${currentFilename} (Session #${currentSessionNumber})`;
+      const memTag = appliedMemories.length > 0 ? ` · 🧠 ${effRows.length} active` : "";
+      document.getElementById("dataset-rows-label").textContent = `${currentRows.length} rows${memTag} · ${colsCount} cols`;
+    }
+
+    function groupAndSum(rows, groupCol, metricCol, mode = "sum", topN = 12) {
+      const acc = {};
+      for (const r of rows) {
+        const rawKey = r[groupCol];
+        const key = (rawKey === null || rawKey === undefined || rawKey === "") ? "Unknown" : String(rawKey);
+        if (mode === "count") {
+          acc[key] = (acc[key] || 0) + 1;
+        } else {
+          const val = Number(r[metricCol]);
+          if (!isNaN(val)) {
+            acc[key] = (acc[key] || 0) + val;
+          }
+        }
+      }
+      const entries = Object.entries(acc).sort((a, b) => b[1] - a[1]).slice(0, topN);
+      return {
+        x: entries.map(e => e[0]),
+        y: entries.map(e => Math.round(e[1] * 100) / 100),
+        total: Math.round(entries.reduce((s, e) => s + e[1], 0) * 100) / 100
+      };
+    }
+
+    function renderBarCard(slotIndex, title, badgeText, xVals, yVals, seriesName) {
+      document.getElementById(`title-c${slotIndex}`).textContent = title;
+      document.getElementById(`badge-c${slotIndex}`).textContent = badgeText;
+      const trace = {
+        x: xVals,
+        y: yVals,
+        name: seriesName,
+        type: "bar",
+        marker: {
+          color: "#0088ff",
+          line: { color: "#00d2ff", width: 0.5 }
+        }
+      };
+      Plotly.newPlot(`plot-c${slotIndex}`, [trace], PLOT_LAYOUT_BASE, { responsive: true, displayModeBar: false });
+    }
+
+    function buildDefaultDashboard() {
+      if (!currentRows || currentRows.length === 0) return;
+      const { rows: activeRows, appliedMemories } = getFilteredRows(currentRows);
+      const memSuffix = appliedMemories.length > 0 ? " · 🧠 Memory Active" : "";
+      const cols = Object.keys(currentRows[0]);
+      const numCols = cols.filter(c => currentRows.some(r => typeof r[c] === "number"));
+      const catCols = cols.filter(c => !numCols.includes(c));
+
+      const hasRetail = cols.includes("region") && cols.includes("revenue_inr");
+      if (hasRetail) {
+        const g1 = groupAndSum(activeRows, "region", "revenue_inr", "sum", 10);
+        renderBarCard(1, "Revenue by Region (INR)", `${g1.x.length} pts${memSuffix}`, g1.x, g1.y, "Revenue (INR)");
+
+        const g2 = groupAndSum(activeRows, "product", "profit_inr", "sum", 10);
+        renderBarCard(2, "Profit by Product (INR)", `${g2.x.length} pts${memSuffix}`, g2.x, g2.y, "Profit (INR)");
+
+        const g3 = groupAndSum(activeRows, "customer_segment", "order_id", "count", 10);
+        renderBarCard(3, "Count of Orders by Customer Segment", `${g3.x.length} pts${memSuffix}`, g3.x, g3.y, "Order Count");
+
+        const g4 = groupAndSum(activeRows, "order_id", "revenue_inr", "sum", 10);
+        renderBarCard(4, "Top 10 Orders by Revenue", `10 pts (Top 10)${memSuffix}`, g4.x, g4.y, "Revenue (INR)");
+      } else {
+        const c1 = catCols[0] || cols[0];
+        const c2 = catCols[1] || c1;
+        const m1 = numCols[0] || cols[cols.length - 1];
+        const m2 = numCols[1] || m1;
+
+        const g1 = groupAndSum(activeRows, c1, m1, "sum", 12);
+        renderBarCard(1, `${m1} by ${c1}`, `${g1.x.length} pts${memSuffix}`, g1.x, g1.y, m1);
+
+        const g2 = groupAndSum(activeRows, c2, m2, "sum", 12);
+        renderBarCard(2, `${m2} by ${c2}`, `${g2.x.length} pts${memSuffix}`, g2.x, g2.y, m2);
+
+        const g3 = groupAndSum(activeRows, c1, c1, "count", 12);
+        renderBarCard(3, `Count by ${c1}`, `${g3.x.length} pts${memSuffix}`, g3.x, g3.y, "Count");
+
+        const g4 = groupAndSum(activeRows, cols[0], m1, "sum", 10);
+        renderBarCard(4, `Top 10 ${cols[0]} by ${m1}`, `10 pts (Top 10)${memSuffix}`, g4.x, g4.y, m1);
+      }
+    }
+
+    function askPreset(qText) {
+      document.getElementById("chat-input").value = qText;
+      processUserQuestion(qText);
+      document.getElementById("chat-input").value = "";
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById("chat-input");
+      const q = input.value.trim();
+      if (!q) return;
+      input.value = "";
+      processUserQuestion(q);
+    }
+
+    function processUserQuestion(question) {
+      addBubble("user", question);
+      const t0 = performance.now();
+
+      if (!currentRows || currentRows.length === 0) {
+        addBubble("agent", "Please load the Demo Dataset or upload a CSV first.");
+        return;
+      }
+
+      const q = question.toLowerCase();
+
+      // Natural language memory creation from chat (Blueprint Page 2 & 6)
+      if (q.startsWith("remember") || q.includes("exclude cancelled") || q.includes("save rule")) {
+        const rule = q.includes("returned") ? "order_status != 'Returned'" : "order_status != 'Cancelled'";
+        const key = q.includes("returned") ? "exclude_returned_orders" : "active_orders_only";
+        upsertMemory(key, rule, `User instruction in Session #${currentSessionNumber}: "${question}"`);
+        updateDatasetBanner();
+        buildDefaultDashboard();
+        const { rows: effRows, appliedMemories } = getFilteredRows(currentRows);
+        const dur = Math.max(1, Math.round(performance.now() - t0));
+        const opId = recordTrace("manage_memory", { action: "save_and_apply", key, rule }, effRows.length, dur, appliedMemories);
+        addBubble("agent", `🧠 <b>Persistent Memory Saved (Session #${currentSessionNumber})</b>: <code>${key}</code> → <code>${rule}</code>.<br>All calculations and Dashboard Stage charts now automatically apply this rule across sessions (${effRows.length}/${currentRows.length} matching rows). <span style="color:#64748b">[${opId}]</span>`);
+        return;
+      }
+
+      const cols = Object.keys(currentRows[0]);
+      const numCols = cols.filter(c => currentRows.some(r => typeof r[c] === "number"));
+      const catCols = cols.filter(c => !numCols.includes(c));
+      const { rows: activeRows, appliedMemories } = getFilteredRows(currentRows);
+
+      // Check anomaly detection intent
+      if (q.includes("anomal") || q.includes("outlier") || q.includes("spike")) {
+        const targetCol = numCols.find(c => q.includes(c.toLowerCase())) || (cols.includes("revenue_inr") ? "revenue_inr" : numCols[0]);
+        const vals = activeRows.map(r => Number(r[targetCol])).filter(v => !isNaN(v)).sort((a, b) => a - b);
+        const q1 = vals[Math.floor(vals.length * 0.25)];
+        const q3 = vals[Math.floor(vals.length * 0.75)];
+        const iqr = q3 - q1;
+        const upper = q3 + 1.5 * iqr;
+        const anomalies = activeRows.filter(r => Number(r[targetCol]) > upper);
+        const dur = Math.max(1, Math.round(performance.now() - t0));
+        const opId = recordTrace("detect_anomalies", { column: targetCol, method: "IQR", upper_bound: Math.round(upper * 100) / 100 }, activeRows.length, dur, appliedMemories);
+
+        const x = anomalies.slice(0, 10).map((r, i) => r[cols[0]] || `Row ${i+1}`);
+        const y = anomalies.slice(0, 10).map(r => r[targetCol]);
+        if (x.length > 0) {
+          renderBarCard(1, `Anomalous Records in ${targetCol}`, `${anomalies.length} outliers`, x, y, targetCol);
+        }
+        const sampleIds = x.slice(0, 4).join(", ");
+        addBubble("agent", `I've analyzed <code>${targetCol}</code> using the 1.5×IQR method (upper threshold: <b>${upper.toFixed(2)}</b>). Detected <b>${anomalies.length} anomalous transactions</b> (${sampleIds}) and updated Card 1 on the Dashboard! <span style="color:#64748b">[${opId}]</span>`);
+        return;
+      }
+
+      const mode = (q.includes("count") || q.includes("how many")) ? "count" : "sum";
+      const matchedDim = catCols.find(c => q.includes(c.toLowerCase().replace("_", " ")) || q.includes(c.toLowerCase()))
+        || (q.includes("channel") && cols.includes("sales_channel") ? "sales_channel" : null)
+        || (q.includes("segment") && cols.includes("customer_segment") ? "customer_segment" : null)
+        || (q.includes("product") && cols.includes("product") ? "product" : null)
+        || (q.includes("status") && cols.includes("order_status") ? "order_status" : null)
+        || (cols.includes("region") ? "region" : catCols[0]);
+
+      const matchedMetric = numCols.find(c => q.includes(c.toLowerCase().replace("_", " ")) || q.includes(c.toLowerCase()))
+        || (q.includes("profit") && cols.includes("profit_inr") ? "profit_inr" : null)
+        || (q.includes("unit") && cols.includes("units_sold") ? "units_sold" : null)
+        || (q.includes("cost") && cols.includes("cost_inr") ? "cost_inr" : null)
+        || (cols.includes("revenue_inr") ? "revenue_inr" : numCols[0]);
+
+      // Compute BOTH unfiltered and memory-filtered results to prove calculation impact
+      const unfilteredGrouped = groupAndSum(currentRows, matchedDim, matchedMetric, mode, 12);
+      const grouped = groupAndSum(activeRows, matchedDim, matchedMetric, mode, 12);
+      const chartTitle = mode === "count"
+        ? `Count of Records by ${matchedDim}`
+        : `${matchedMetric} by ${matchedDim}`;
+
+      const memBadge = appliedMemories.length > 0 ? " · 🧠 Memory Active" : "";
+      renderBarCard(1, chartTitle, `${grouped.x.length} pts${memBadge}`, grouped.x, grouped.y, mode === "count" ? "Count" : matchedMetric);
+
+      const dur = Math.max(1, Math.round(performance.now() - t0));
+      const opId = recordTrace(
+        "query_data",
+        {
+          group_by: matchedDim,
+          metric: matchedMetric,
+          aggregation: mode,
+          sql_filter: appliedMemories.map(m => m.rule).join(" AND ") || null,
+          unfiltered_total: unfilteredGrouped.total,
+          memory_filtered_total: grouped.total
+        },
+        activeRows.length,
+        dur,
+        appliedMemories
+      );
+
+      const topLeader = grouped.x[0] ? `Top result: <b>${grouped.x[0]}</b> (<b>${grouped.y[0].toLocaleString()}</b>)` : "";
+      const memoryDeltaNote = (appliedMemories.length > 0 && unfilteredGrouped.total !== grouped.total)
+        ? `<br><span style="color:#38bdf8; font-size:12px;">🧠 Memory <code>${appliedMemories[0].rule}</code> altered total from <b>${unfilteredGrouped.total.toLocaleString()}</b> → <b>${grouped.total.toLocaleString()}</b> (${activeRows.length}/${currentRows.length} rows).</span>`
+        : "";
+      addBubble("agent", `I've created a bar chart for <b>"${chartTitle}"</b>. Check the Dashboard! ${topLeader}${memoryDeltaNote} <span style="color:#64748b">[${opId}]</span>`);
+    }
+
+    function renderDataTable() {
+      const container = document.getElementById("data-table-container");
+      if (!currentRows || currentRows.length === 0) {
+        container.innerHTML = "<p style='padding:16px'>No data loaded.</p>";
+        return;
+      }
+      const cols = Object.keys(currentRows[0]);
+      let html = "<table><thead><tr>";
+      for (const c of cols) html += `<th>${c}</th>`;
+      html += "</tr></thead><tbody>";
+      for (const r of currentRows.slice(0, 100)) {
+        html += "<tr>";
+        for (const c of cols) {
+          const val = r[c] === null || r[c] === undefined ? "<span style='color:#64748b'>null</span>" : r[c];
+          html += `<td>${val}</td>`;
+        }
+        html += "</tr>";
+      }
+      html += "</tbody></table>";
+      container.innerHTML = html;
+    }
+
+    function renderTraces() {
+      const container = document.getElementById("trace-container");
+      if (executionTraces.length === 0) {
+        container.innerHTML = "<div class='trace-card'>No tool executions recorded yet.</div>";
+        return;
+      }
+      container.innerHTML = executionTraces.map(t => `
+        <div class="trace-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+            <span style="color:#00d2ff; font-weight:700;">${t.tool_name} (${t.operation_id}) · <span style="color:#a78bfa;">${t.session_id || 'session_1'}</span></span>
+            <span style="color:#10b981; font-weight:600;">● SUCCESS · ${t.duration_ms}ms</span>
+          </div>
+          <div style="color:#94a3b8; margin-bottom:4px;">Dataset: <code>${t.dataset}</code> (${t.rows_processed} rows evaluated)</div>
+          ${t.memories_applied && t.memories_applied.length > 0 ? `<div style="color:#38bdf8; font-size:11.5px; margin-bottom:6px;">🧠 Memories Applied: <code>${t.memories_applied.map(m => `${m.key} v${m.version} (${m.rule})`).join(", ")}</code></div>` : ""}
+          <pre style="background:#090d16; padding:8px; border-radius:6px; color:#cbd5e1; overflow-x:auto;">${JSON.stringify(t.validated_parameters, null, 2)}</pre>
+        </div>
+      `).join("");
+    }
+
+    function upsertMemory(key, rule, definition = "Explicit user metric rule") {
+      let nextVersion = 1;
+      domainMemories.forEach(m => {
+        if (m.key === key && m.status === "active") {
+          m.status = "superseded";
+          nextVersion = (m.version || 1) + 1;
+        }
+      });
+      domainMemories.unshift({
+        memory_id: "mem_" + Math.random().toString(16).substring(2, 8),
+        key,
+        rule,
+        definition,
+        version: nextVersion,
+        status: "active",
+        saved_in_session: currentSessionNumber,
+        updated_at: new Date().toISOString()
+      });
+      persistMemories();
+      renderMemories();
+    }
+
+    function toggleMemoryStatus(memId) {
+      const target = domainMemories.find(m => m.memory_id === memId);
+      if (!target) return;
+      target.status = target.status === "active" ? "deleted" : "active";
+      persistMemories();
+      renderMemories();
+      updateDatasetBanner();
+      buildDefaultDashboard();
+    }
+
+    function renderMemories() {
+      const container = document.getElementById("memory-list");
+      if (!domainMemories || domainMemories.length === 0) {
+        container.innerHTML = "<div class='trace-card'>No domain memories stored.</div>";
+        return;
+      }
+      container.innerHTML = domainMemories.map(m => {
+        const isActive = m.status === "active";
+        const badgeColor = isActive ? "#10b981" : (m.status === "superseded" ? "#f59e0b" : "#ef4444");
+        return `
+          <div class="trace-card" style="opacity:${isActive ? '1' : '0.65'}">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong style="color:#38bdf8;">${m.key} (v${m.version || 1})</strong>
+                <span style="color:#64748b; font-size:11px; margin-left:8px;">Saved in Session #${m.saved_in_session || 1}</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <span style="color:${badgeColor}; font-size:11px; font-weight:700; text-transform:uppercase;">● ${m.status}</span>
+                <button class="chip" onclick="toggleMemoryStatus('${m.memory_id}')">${isActive ? 'Deactivate' : 'Restore'}</button>
+              </div>
+            </div>
+            <div style="margin-top:6px;">SQL Filter Rule: <code>${m.rule}</code></div>
+            ${m.definition ? `<div style="margin-top:4px; color:#94a3b8; font-size:11.5px;">${m.definition}</div>` : ""}
+          </div>
+        `;
+      }).join("");
+    }
+
+    function saveMemoryRule() {
+      const k = document.getElementById("mem-key").value.trim();
+      const r = document.getElementById("mem-rule").value.trim();
+      if (!k || !r) return;
+      upsertMemory(k, r, `Saved via Domain Memory Manager in Session #${currentSessionNumber}`);
+      updateDatasetBanner();
+      buildDefaultDashboard();
+      const { rows: effRows, appliedMemories } = getFilteredRows(currentRows);
+      recordTrace("manage_memory", { key: k, rule: r, effective_rows: effRows.length }, effRows.length, 2, appliedMemories);
+      addBubble("agent", `Saved &amp; applied persistent memory rule <code>${k}: ${r}</code> in Session #${currentSessionNumber}. Charts recalculated (${effRows.length}/${currentRows.length} rows)!`);
+    }
+
+    function simulateNewSession() {
+      currentSessionNumber += 1;
+      localStorage.setItem(SESSION_COUNTER_KEY, String(currentSessionNumber));
+      // Reload memories strictly from persistent storage
+      domainMemories = JSON.parse(localStorage.getItem(MEMORY_STORAGE_KEY) || "[]");
+      renderMemories();
+      updateDatasetBanner();
+      buildDefaultDashboard();
+      const { rows: effRows, appliedMemories } = getFilteredRows(currentRows);
+      recordTrace("retrieve_memory", { session_id: `session_${currentSessionNumber}`, retrieved_rules: appliedMemories.map(m => m.rule) }, effRows.length, 2, appliedMemories);
+      addBubble("agent", `🔄 <b>Started Session #${currentSessionNumber}</b>. Retrieved <b>${appliedMemories.length} active memory rule(s)</b> from persistent storage (<code>${appliedMemories.map(m => m.rule).join(", ") || "none"}</code>) and applied them to calculations!`);
+    }
+
+    function runCrossSessionProof() {
+      if (!currentRows || currentRows.length === 0) return;
+      // 1. Compute baseline without memory filter
+      const baseline = groupAndSum(currentRows, "region", "revenue_inr", "sum", 10);
+      // 2. Save metric definition in Session A
+      const sessionA = currentSessionNumber;
+      upsertMemory("active_customer_revenue", "order_status != 'Cancelled'", "Exclude Cancelled orders from active revenue");
+      // 3. Advance to Session B and reload from persistent storage
+      currentSessionNumber = sessionA + 1;
+      localStorage.setItem(SESSION_COUNTER_KEY, String(currentSessionNumber));
+      domainMemories = JSON.parse(localStorage.getItem(MEMORY_STORAGE_KEY) || "[]");
+      const { rows: sessionBRows, appliedMemories } = getFilteredRows(currentRows);
+      const afterMem = groupAndSum(sessionBRows, "region", "revenue_inr", "sum", 10);
+
+      updateDatasetBanner();
+      buildDefaultDashboard();
+      renderMemories();
+      const opId = recordTrace(
+        "cross_session_verification",
+        {
+          session_a_saved: "order_status != 'Cancelled'",
+          session_b_retrieved: true,
+          unfiltered_rows: currentRows.length,
+          filtered_rows: sessionBRows.length,
+          unfiltered_total_revenue_inr: baseline.total,
+          session_b_filtered_revenue_inr: afterMem.total
+        },
+        sessionBRows.length,
+        4,
+        appliedMemories
+      );
+
+      const banner = document.getElementById("memory-proof-banner");
+      banner.style.display = "block";
+      banner.innerHTML = `
+        <b>✅ Cross-Session Persistent Memory Verified (${opId}):</b><br>
+        • <b>Session #${sessionA} (Saved Rule):</b> <code>active_customer_revenue: order_status != 'Cancelled'</code><br>
+        • <b>Session #${currentSessionNumber} (Retrieved &amp; Applied):</b> Evaluated <b>${sessionBRows.length}</b> active orders (excluded ${currentRows.length - sessionBRows.length} cancelled orders).<br>
+        • <b>Actual Calculation Change:</b> Total Revenue changed from <b>₹${baseline.total.toLocaleString()}</b> (unfiltered) → <b>₹${afterMem.total.toLocaleString()}</b> (with persistent memory)!
+      `;
+
+      addBubble("agent", `✅ <b>Cross-Session Memory Proof Complete (Session #${sessionA} → Session #${currentSessionNumber})</b>:<br>Unfiltered Revenue: <b>₹${baseline.total.toLocaleString()}</b> (${currentRows.length} rows) → Session #${currentSessionNumber} Memory-Filtered Revenue: <b>₹${afterMem.total.toLocaleString()}</b> (${sessionBRows.length} rows). <span style="color:#64748b">[${opId}]</span>`);
+    }
+
+    function switchView(viewName) {
+      ["stage", "data", "trace", "memory"].forEach(v => {
+        document.getElementById(`view-${v}`).classList.toggle("active", v === viewName);
+        const tab = document.getElementById(`tab-${v}`);
+        if (tab) tab.classList.toggle("active", v === viewName);
+      });
+      ["stage", "trace", "data"].forEach(r => {
+        const btn = document.getElementById(`rail-${r}`);
+        if (btn) btn.classList.toggle("active", r === viewName);
+      });
+      if (viewName === "stage") {
+        window.dispatchEvent(new Event("resize"));
+      }
+    }
+
+    function downloadChart(plotId) {
+      Plotly.downloadImage(plotId, { format: "png", width: 900, height: 500, filename: plotId });
+    }
+
+    function downloadFullReport() {
+      const report = {
+        generated_at: new Date().toISOString(),
+        session_number: currentSessionNumber,
+        dataset: currentFilename,
+        row_count: currentRows.length,
+        active_memories: domainMemories,
+        execution_traces: executionTraces
+      };
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `atlas_report_${currentFilename.replace(".csv", "")}.json`;
+      a.click();
+    }
+
+    // Automatically initialize Persistent Memory and Demo Dataset on load
+    window.addEventListener("DOMContentLoaded", () => {
+      initPersistentMemory();
+      renderMemories();
+      loadDemoDataset();
+    });
+  </script>
+</body>
+</html>
